@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonderlight Adventure: Chhattisgarh Tourism</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles to enhance aesthetics and readability */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb; /* Light background */
+        }
+        .section-header {
+            border-left: 6px solid #fbbf24; /* Amber-400 */
+        }
+        .card-bg {
+            background-color: #ffffff;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card-bg:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="min-h-screen bg-gray-50">
+
+        <!-- Header Section -->
+        <header class="bg-indigo-800 text-white shadow-lg p-6 md:p-12">
+            <div class="max-w-7xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+                    <span class="text-amber-400">Wonderlight</span> Adventure
+                </h1>
+                <p class="mt-2 text-xl md:text-2xl font-light opacity-90">
+                    The Heart of India: Land of Waterfalls, Temples, and Tribes
+                </p>
+                <div class="mt-4 flex space-x-4">
+                    <!-- Icon implementation using Lucide icons -->
+                    <i data-lucide="map-pin" class="w-6 h-6 text-amber-400"></i>
+                    <i data-lucide="mountain" class="w-6 h-6 text-amber-400"></i>
+                    <i data-lucide="temple" class="w-6 h-6 text-amber-400"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Wrapper -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+            <!-- 1. Waterfalls Section -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 section-header pl-4 mb-8">
+                    The Majestic Cascades (Jal-Prapat)
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Chitrakote Falls Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-100">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/44/c5/49/chitrakoot-falls.jpg?w=1200&h=1200&s=1" alt="Chitrakote Falls" class="w-full h-40 object-cover rounded-lg mb-4">
+                        <i data-lucide="water" class="w-8 h-8 text-indigo-600 mb-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Chitrakote Falls</h3>
+                        <p class="text-sm text-gray-500 mb-4 font-medium italic">"The Niagara Falls of India"</p>
+                        <p class="text-gray-600 text-sm">
+                            India's broadest waterfall, often compared to Niagara. It's a spectacular horseshoe-shaped cataract on the Indravati River near Jagdalpur, especially impressive during the monsoon season (July-October).
+                        </p>
+                    </div>
+
+                    <!-- Tirathgarh Waterfalls Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-100">
+                        <img src="https://hblimg.mmtcdn.com/content/hubble/img/jagdalpurdestimages/mmt/activities/m_Tirathgarh_Waterfalls_1_l_480_640.jpg" alt="Tirathgarh Waterfalls" class="w-full h-40 object-cover rounded-lg mb-4">
+                        <i data-lucide="water" class="w-8 h-8 text-indigo-600 mb-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Tirathgarh Waterfalls</h3>
+                        <p class="text-sm text-gray-500 mb-4 font-medium italic">Cascades within the Valley</p>
+                        <p class="text-gray-600 text-sm">
+                            A stunning block-type waterfall located inside the Kanger Valley National Park. The water cascades down in multiple steps, creating a mesmerizing milky white effect, ideal for nature lovers.
+                        </p>
+                    </div>
+
+                    <!-- Ghatarani Waterfall Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-100">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/22/80/96/ghatarani-waterfall.jpg?w=1200&h=-1&s=1" alt="Ghatarani Waterfall" class="w-full h-40 object-cover rounded-lg mb-4">
+                        <i data-lucide="water" class="w-8 h-8 text-indigo-600 mb-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Ghatarani Waterfall</h3>
+                        <p class="text-sm text-gray-500 mb-4 font-medium italic">A Peaceful Picnic Spot</p>
+                        <p class="text-gray-600 text-sm">
+                            A major waterfall near Raipur, set amidst thick forest. It's a highly popular spot for weekend trips and picnics, offering a refreshing break from city life.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 2. Temples and Heritage Section -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 section-header pl-4 mb-8">
+                    Ancient Marvels & Spiritual Sites
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- Bhoramdeo Temple Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-100">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/e1/07/70/bhoramdeo-temple.jpg?w=1200&h=1200&s=1" alt="Bhoramdeo Temple" class="w-full h-40 object-cover rounded-lg mb-4">
+                        <div>
+                            <i data-lucide="landmark" class="w-8 h-8 text-amber-600 mb-3"></i>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-1">Bhoramdeo Temple (Kawardha)</h3>
+                            <p class="text-sm text-gray-500 mb-3 italic">The Khajuraho of Chhattisgarh</p>
+                            <p class="text-gray-600 text-sm">
+                                Dedicated to Lord Shiva, this beautiful 11th-century temple complex is famous for its intricate, erotic stone carvings, similar to the Khajuraho temples. It is set amidst the scenic Maikal Hills.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sirpur Heritage Site Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-100">
+                        <img src="https://mahasamund.rototransindia.com/assets/sirpur/img1.png" alt="Sirpur Heritage Site" class="w-full h-40 object-cover rounded-lg mb-4">
+                        <div>
+                            <i data-lucide="landmark" class="w-8 h-8 text-amber-600 mb-3"></i>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-1">Sirpur Heritage Site</h3>
+                            <p class="text-sm text-gray-500 mb-3 italic">Archaeological Treasure Trove</p>
+                            <p class="text-gray-600 text-sm">
+                                An important archaeological site on the Mahanadi riverbank. It houses ruins of ancient Buddhist monasteries, Jain shrines, and Hindu temples like the notable **Laxman Temple**, built entirely of brick.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Danteshwari Temple Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-100">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/ea/06/e4/danteshwari-night-view.jpg?w=900&h=-1&s=1" alt="Danteshwari Temple" class="w-full h-40 object-cover rounded-lg mb-4">
+                        <div>
+                            <i data-lucide="landmark" class="w-8 h-8 text-amber-600 mb-3"></i>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-1">Danteshwari Temple (Dantewada)</h3>
+                            <p class="text-sm text-gray-500 mb-3 italic">One of the 52 Shakti Peethas</p>
+                            <p class="text-gray-600 text-sm">
+                                A highly revered Hindu temple dedicated to Goddess Danteshwari, the ancestral deity of the Bastar state. It is a major pilgrimage center, especially during Navratri and Dussehra.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Rajim Lochan Temple Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/6th_to_7th_century_Rajivalochan_Vishnu_Temple%2C_Rajim%2C_Chhattisgarh_-_58.jpg" alt="Rajiv Lochan Temple" class="w-full h-40 object-cover rounded-lg mb-4">
+                        <div>
+                            <i data-lucide="landmark" class="w-8 h-8 text-amber-600 mb-3"></i>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-1">Rajim (Rajiv Lochan Temple)</h3>
+                            <p class="text-sm text-gray-500 mb-3 italic">The Prayag of Chhattisgarh</p>
+                            <p class="text-gray-600 text-sm">
+                                Located at the confluence of three rivers (Triveni Sangam), Rajim is a sacred site. The Rajiv Lochan Temple is an architectural masterpiece dedicated to Lord Vishnu.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 3. Nature, Caves & Wildlife Section -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 section-header pl-4 mb-8">
+                    Lush Green Sanctuaries & Caves
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Kanger Valley National Park Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-100">
+                        <img src="https://s7ap1.scene7.com/is/image/incredibleindia/kanger-valley-national-park-jagdalpur-1-attr-hero?qlt=82&ts=1727011318977" alt="Kanger Valley National Park" class="w-full h-40 object-cover rounded-lg mb-4">
+                        <i data-lucide="trees" class="w-8 h-8 text-green-700 mb-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Kanger Valley National Park</h3>
+                        <p class="text-sm text-gray-500 mb-4 font-medium italic">Biodiversity Hotspot</p>
+                        <p class="text-gray-600 text-sm">
+                            A dense park known for its rich biodiversity, home to the state animal, the Wild Water Buffalo, and several endemic bird species. It also houses the famous Kutumsar Caves.
+                        </p>
+                    </div>
+
+                    <!-- Kutumsar Caves Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-100">
+                        <img src="https://s7ap1.scene7.com/is/image/incredibleindia/kotumsar-caves-jagdalpur-chhattisgarh-1-attr-hero?qlt=82&ts=1727011161514" alt="Kutumsar Caves" class="w-full h-40 object-cover rounded-lg mb-4">
+                        <i data-lucide="mountain" class="w-8 h-8 text-green-700 mb-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Kutumsar Caves</h3>
+                        <p class="text-sm text-gray-500 mb-4 font-medium italic">Subterranean Wonders</p>
+                        <p class="text-gray-600 text-sm">
+                            Located inside Kanger Valley, these are India's longest natural caves, featuring spectacular stalactite and stalagmite formations, including a naturally formed Shivalinga.
+                        </p>
+                    </div>
+
+                    <!-- Mainpat Hill Station Card -->
+                    <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-100">
+                        <img src="https://cms.patrika.com/wp-content/uploads/2021/02/09/mainpat.jpg" alt="Mainpat Hill Station" class="w-full h-40 object-cover rounded-lg mb-4">
+                        <i data-lucide="cloud-fog" class="w-8 h-8 text-green-700 mb-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Mainpat (Surguja)</h3>
+                        <p class="text-sm text-gray-500 mb-4 font-medium italic">The 'Shimla of Chhattisgarh'</p>
+                        <p class="text-gray-600 text-sm">
+                            A charming hill station and plateau offering cool temperatures, deep valleys, and beautiful waterfalls. It is also famous for being home to a significant Tibetan settlement in India.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Culture and Arts Section -->
+            <section>
+                <h2 class="text-3xl font-bold text-gray-800 section-header pl-4 mb-8">
+                    Vibrant Culture & Tribal Life
+                </h2>
+                <div class="space-y-6 bg-indigo-50 p-6 rounded-xl shadow-inner border border-indigo-100">
+                    
+                    <div class="flex items-start space-x-4">
+                        <i data-lucide="users" class="w-6 h-6 text-indigo-700 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="text-lg font-semibold text-indigo-800">Tribal Heritage (Bastar Region)</h3>
+                            <p class="text-gray-700 text-sm">
+                                Chhattisgarh is home to vibrant communities like the Gond, Muria, and Maria tribes. The Bastar region is a cultural hub where you can experience their unique traditions, weekly **Haats** (markets), and exquisite handicrafts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <i data-lucide="music" class="w-6 h-6 text-indigo-700 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="text-lg font-semibold text-indigo-800">Folk Arts and Dance</h3>
+                            <ul class="list-disc list-inside text-gray-700 text-sm pl-2 space-y-1">
+                                <li>**Pandwani:** A famous folk ballad form involving the musical narration of the Mahabharata epic.</li>
+                                <li>**Raut Nacha:** The traditional folk dance of the cowherd community, performed during Diwali.</li>
+                                <li>**Panthi:** A dance of the Satnami community, often incorporating spiritual and devotional messages.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <i data-lucide="palette" class="w-6 h-6 text-indigo-700 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="text-lg font-semibold text-indigo-800">Handicrafts</h3>
+                            <p class="text-gray-700 text-sm">
+                                The state is famous for its intricate Dokra (bell metal) craft, terracotta pottery, wood carvings, and beautiful handloom textiles, especially Kosa silk.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <!-- Footer Section -->
+        <footer class="bg-indigo-900 text-white mt-12 p-6 md:p-8">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
+                <div class="mb-4 md:mb-0">
+                    <p class="font-semibold text-amber-400">Travel Tip:</p>
+                    <p>The best time to visit Chhattisgarh is generally **October to March**, when the weather is pleasant.</p>
+                </div>
+                <div class="space-y-1 text-right">
+                    <p class="text-xs opacity-75">Explore the Unexplored: #Chhattisgarhtourism</p>
+                    <p class="text-xs opacity-50">&copy; 2025 Wonderlight Adventure.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    
+    <!-- Initialize Lucide Icons -->
+    <script>
+        // FIX: The lucide.createIcons() call needs to be deferred to ensure the external script is fully loaded.
+        window.addEventListener('load', () => {
+             if (typeof lucide !== 'undefined') {
+                 lucide.createIcons();
+             }
+        });
+    </script>
+
+</body>
+</html>

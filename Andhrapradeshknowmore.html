@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WonderlightAdventure</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use the Inter font (default for design) -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            color: #1f2937; /* Gray-900 */
+        }
+        /* Custom style for the hero text shadow for better readability */
+        .shadow-text-lg {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ap-primary': '#059669', // Emerald 600 - Fresh, natural color
+                        'ap-secondary': '#10b981', // Emerald 500
+                        'ap-dark': '#111827', // Gray 900
+                        'ap-light': '#f3f4f6', // Gray 100
+                    },
+                    backgroundImage: {
+                        // Placeholder image set to resemble a coastal sunset, using a dark overlay for text visibility
+                        'hero-pattern': "linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0.35)), url('https://placehold.co/1200x600/374151/ffffff?text=Pristine+Andhra+Coastline')"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo area updated: SVG icon removed -->
+            <a href="#" class="flex items-center"> 
+                <span class="text-xl font-extrabold text-ap-dark">WonderlightAdventure</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#destinations" class="text-gray-600 hover:text-ap-primary transition duration-150 p-2 rounded-lg hover:bg-ap-light">Destinations</a>
+                <a href="#experiences" class="text-gray-600 hover:text-ap-primary transition duration-150 p-2 rounded-lg hover:bg-ap-light">Experiences</a>
+                <a href="#contact" class="text-gray-600 hover:text-ap-primary transition duration-150 p-2 rounded-lg hover:bg-ap-light">Plan Your Trip</a>
+            </nav>
+            <!-- Mobile Menu Toggle (Functionality handled in JS for smooth scrolling only) -->
+            <button class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-ap-light">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-ap-dark bg-hero-pattern bg-cover bg-center h-[70vh] flex items-center justify-center text-center rounded-b-xl shadow-2xl">
+            <div class="p-8 max-w-4xl">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4 leading-tight shadow-text-lg">
+                    Andhra Pradesh: The Coast of Possibilities
+                </h1>
+                <p class="text-xl md:text-2xl text-ap-light italic mb-8">
+                    Discover a land of ancient spirituality, natural wonders, and 970 km of pristine coastline.
+                </p>
+                <div class="bg-ap-primary text-white text-lg font-bold py-3 px-8 rounded-full inline-block shadow-2xl tracking-wider uppercase hover:bg-ap-secondary transition duration-300 cursor-pointer">
+                    APTDC Motto: Everything's Possible!
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Facts/Theme Highlights Section -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center text-ap-dark mb-12">Experience the Diversity of Andhra</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Theme Card 1: Spirituality -->
+                    <div class="bg-ap-light p-6 rounded-xl shadow-lg border-b-4 border-ap-primary hover:shadow-xl transition duration-300">
+                        <div class="text-ap-primary mb-3">
+                            <!-- Icon for Spirituality/Temple -->
+                            <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h-4a2 2 0 01-2-2V7a2 2 0 012-2h4a2 2 0 012 2v11a2 2 0 01-2 2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11V3"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 20h8"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-ap-dark mb-2 text-center">Sacred Pilgrimage</h3>
+                        <p class="text-gray-600 text-center text-sm">
+                            Home to the world-famous Tirumala Venkateswara Temple and the sacred Mallikarjuna Jyotirlinga in Srisailam, offering a deep spiritual journey.
+                        </p>
+                    </div>
+
+                    <!-- Theme Card 2: Coastal Bliss -->
+                    <div class="bg-ap-light p-6 rounded-xl shadow-lg border-b-4 border-ap-primary hover:shadow-xl transition duration-300">
+                        <div class="text-ap-primary mb-3">
+                            <!-- Icon for Ocean/Beach -->
+                            <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h10m-10 4h10M4 7l2-2 2 2m10 0l-2-2-2 2M3 17h18"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-ap-dark mb-2 text-center">Pristine Beaches</h3>
+                        <p class="text-gray-600 text-center text-sm">
+                            With 970 km of coastline, enjoy the golden sands of Rishikonda, the tranquility of Mypadu, and the vibrant atmosphere of RK Beach in Vizag.
+                        </p>
+                    </div>
+
+                    <!-- Theme Card 3: Adventure & Nature -->
+                    <div class="bg-ap-light p-6 rounded-xl shadow-lg border-b-4 border-ap-primary hover:shadow-xl transition duration-300">
+                        <div class="text-ap-primary mb-3">
+                            <!-- Icon for Cave/Adventure -->
+                            <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6m6 0a9 9 0 100 18 9 9 0 000-18z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-ap-dark mb-2 text-center">Canyons & Caves</h3>
+                        <p class="text-gray-600 text-center text-sm">
+                            Witness the breathtaking Gandikota Gorge (India's Grand Canyon) and delve into the massive underground wonders of the Belum and Borra Caves.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Destinations Section - EXPANDED TO EIGHT DESTINATIONS -->
+        <section id="destinations" class="py-16 bg-ap-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Updated Title -->
+                <h2 class="text-4xl font-extrabold text-center text-ap-dark mb-12">Must-Visit Destinations</h2>
+
+                <!-- Grid updated for 8 cards (4 columns on large screens) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                    <!-- Destination Card 1: Tirupati (Existing) -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-500">
+                        <img src="https://static.toiimg.com/thumb/imgsize-23456,msid-117096573,width-600,resizemode-4/117096573.jpg" alt="Tirupati Temple" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-ap-dark mt-1 mb-2">Tirupati</h3>
+                            <p class="text-gray-600 text-sm">
+                                The ultimate spiritual destination, home to the revered Sri Venkateswara Temple. A must-visit for pilgrims and lovers of ancient Dravidian architecture.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Destination Card 2: Visakhapatnam (Vizag) (Existing) -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-500">
+                        <img src="https://s3.india.com/wp-content/uploads/2024/09/travel-routes-to-vizag.jpg?impolicy=Medium_Widthonly&w=350&h=263" alt="Visakhapatnam Coast" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-ap-dark mt-1 mb-2">Visakhapatnam</h3>
+                            <p class="text-gray-600 text-sm">
+                                The 'City of Destiny' offers a spectacular blend of hills and beaches. Explore the INS Kursura Submarine Museum and Kailasagiri Hill.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Destination Card 3: Araku Valley (Existing) -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-500">
+                        <img src="https://xploringdestinations.com/wp-content/uploads/2025/05/Araku-valley.jpg" alt="Araku Valley Scenery" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-ap-dark mt-1 mb-2">Araku Valley</h3>
+                            <p class="text-gray-600 text-sm">
+                                A tranquil hill station in the Eastern Ghats, famous for its coffee plantations, unique tribal culture, and the fascinating Borra Caves.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Destination Card 4: Gandikota (Existing) -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-500">
+                        <img src="https://turuhi.com/storage/story/Title-Gandikota-Canyon.jpg" alt="Gandikota Canyon" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-ap-dark mt-1 mb-2">Gandikota</h3>
+                            <p class="text-gray-600 text-sm">
+                                Often called 'The Grand Canyon of India,' this destination features a dramatic gorge and the historic Gandikota Fort on the Pennar River.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Destination Card 5: Srisailam (NEW) -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-500">
+                        <img src="https://static.toiimg.com/thumb/msid-46918850,width=1200,height=900/46918850.jpg" alt="Srisailam Temple" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-ap-dark mt-1 mb-2">Srisailam</h3>
+                            <p class="text-gray-600 text-sm">
+                                Nestled in the Nallamala Hills, it is home to one of the 12 Jyotirlingas, the Mallikarjuna Temple, blending spirituality with natural beauty.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Destination Card 6: Belum Caves (NEW) -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-500">
+                        <img src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2024/01/01/e5607381e01f4afccd02137d7c1276dc_1000x1000.jpg" alt="Belum Caves" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-ap-dark mt-1 mb-2">Belum Caves</h3>
+                            <p class="text-gray-600 text-sm">
+                                Explore the longest cave system in the Indian subcontinent, famous for its magnificent stalactite and stalagmite formations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Destination Card 7: Horsley Hills (NEW) -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-500">
+                        <img src="https://www.captureatrip.com/_next/image?url=https%3A%2F%2Fd1zvcmhypeawxj.cloudfront.net%2Flocation%2FAndhra%20Pradesh%2Fblogs%2Fhorsley-hills-beach-41b3d89658-w9pqkt-webp-03dc4ae4b4-1752060392631.webp&w=3840&q=50" alt="Horsley Hills" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-ap-dark mt-1 mb-2">Horsley Hills</h3>
+                            <p class="text-gray-600 text-sm">
+                                A serene hill station retreat in the Chittoor district, offering cool climates, dense forests, and panoramic viewpoints.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Destination Card 8: Lepakshi (NEW) -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-500">
+                        <img src="https://img-cdn.publive.online/fit-in/640x360/filters:format(webp)/local-samosal/media/media_files/2025/04/11/hMJTE4emVyIf7E8kdMEw.png" alt="Lepakshi Temple" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-ap-dark mt-1 mb-2">Lepakshi</h3>
+                            <p class="text-gray-600 text-sm">
+                                A marvel of Vijayanagara architecture, featuring the famous Hanging Pillar, exquisite murals, and a massive monolithic Nandi statue.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Culture & Cuisine Section -->
+        <section id="experiences" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="md:order-2">
+                        <img src="https://hydkhabar.com/wp-content/uploads/2024/12/Kuchipudi.jpg" alt="Andhra Cuisine" class="w-full h-auto rounded-xl shadow-2xl object-cover">
+                    </div>
+
+                    <div class="md:order-1">
+                        <h2 class="text-4xl font-extrabold text-ap-dark mb-6">Culinary & Cultural Delights</h2>
+                        <p class="text-lg text-gray-700 mb-8">
+                            Andhra Pradesh is a vibrant mosaic of traditions, delicious food, and exquisite craftsmanship that defines its unique identity in South India.
+                        </p>
+
+                        <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-ap-primary text-2xl font-bold mr-3">&#9679;</span>
+                                <div>
+                                    <strong class="text-ap-dark">Fiery Cuisine:</strong> Taste the famous, spice-rich *Gongura Pachadi* (chutney) and authentic Andhra Biryani. The food here is a true explosion of flavor.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-ap-primary text-2xl font-bold mr-3">&#9679;</span>
+                                <div>
+                                    <strong class="text-ap-dark">Classical Dance:</strong> Witness *Kuchipudi*, one of the 8 classical dance forms of India, known for its grace, drama, and elaborate storytelling.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-ap-primary text-2xl font-bold mr-3">&#9679;</span>
+                                <div>
+                                    <strong class="text-ap-dark">Handloom Heritage:</strong> Shop for exquisite handwoven textiles from centers like Dharmavaram (Silk) and Mangalagiri (Cotton), showcasing rich indigenous art.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="bg-ap-dark text-white py-12 rounded-t-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-bold text-ap-secondary mb-4">About APTDC</h4>
+                    <p class="text-sm text-gray-400">
+                        Andhra Pradesh Tourism Development Corporation is committed to providing world-class and sustainable travel experiences across the state.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-ap-secondary mb-4">Plan Your Trip</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#destinations" class="hover:text-ap-light transition duration-150">Find Destinations</a></li>
+                        <li><a href="#experiences" class="hover:text-ap-light transition duration-150">Local Guides</a></li>
+                        <li><a href="https://tourism.ap.gov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-ap-light transition duration-150">Official Bookings Site</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-ap-secondary mb-4">Contact Info</h4>
+                    <p class="text-sm text-gray-400">
+                        Email:wonderlightadventure@gmail.com<br>
+                        Toll-Free Help Line:7735847678
+                    </p>
+                </div>
+                <div class="col-span-1 md:col-span-1">
+                    <h4 class="text-lg font-bold text-ap-secondary mb-4">Share Your Journey</h4>
+                    <p class="text-sm text-gray-400">#APTourism #AndhraPradesh</p>
+                </div>
+            </div>
+            <div class="text-center text-sm text-gray-500 mt-8 border-t border-gray-700 pt-4">
+                &copy; 2025 WonderlightAdventure. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for smooth scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // Check if the anchor is for a section on the page
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

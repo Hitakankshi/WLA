@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WonderlightAdventure - West Bengal Tourism</title>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load marked.js for Markdown rendering (for LLM output) --><script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.10/marked.min.js"></script>
+    <!-- Configure Tailwind for custom theme and font --><script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bengal-green': '#006400', // Dark Green for nature/tea
+                        'bengal-blue': '#1e90ff',  // Dodger Blue for rivers/sea
+                        'bengal-gold': '#FFD700',  // Gold for culture/heritage
+                        'bg-light': '#f7f9f9',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for aesthetic font and subtle background texture */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9f9;
+            /* Added smooth scroll for anchor links */
+            scroll-behavior: smooth; 
+        }
+        .hero-bg {
+            /* Updated background image to a scenic placeholder */
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://placehold.co/1200x600/6A5ACD/ffffff?text=Scenic+West+Bengal');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Custom styling for markdown content in the modal */
+        #itineraryResult h1, #itineraryResult h2, #itineraryResult h3 {
+            font-weight: 700;
+            color: #006400; /* bengal-green */
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        #itineraryResult ul, #itineraryResult ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        #itineraryResult ul li {
+            list-style-type: disc;
+        }
+    </style>
+</head>
+<body class="antialiased" id="top">
+
+    <!-- Header & Navigation --><header class="bg-white shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- The title is now an anchor link that points to the top of the page (#top) -->
+            <a href="home.html" class="text-2xl font-bold text-bengal-green hover:text-bengal-blue transition duration-300">
+                Wonderlight<span class="text-bengal-gold">Adventure</span>
+            </a>
+            <nav class="hidden md:flex space-x-6 text-gray-600">
+                <a href="#destinations" class="hover:text-bengal-blue transition duration-300">Destinations</a>
+                <a href="#heritage" class="hover:text-bengal-blue transition duration-300">Culture</a>
+                <a href="#contact" class="hover:text-bengal-blue transition duration-300">Plan Your Trip</a>
+            </nav>
+            <button class="md:hidden p-2 rounded-lg bg-bengal-green text-white">
+                <!-- Hamburger Icon using SVG --><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section --><section class="hero-bg text-white py-20 md:py-32 flex items-center justify-center rounded-b-xl shadow-2xl">
+            <div class="text-center max-w-4xl mx-auto px-6">
+                <h2 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
+                    Discover the Diversity of West Bengal
+                </h2>
+                <p class="text-xl sm:text-2xl font-light mb-8 opacity-90">
+                    From the majestic Himalayas to the mysterious mangroves, embark on a journey through the "Sweetest Part of India."
+                </p>
+                <a href="#destinations" class="inline-block px-8 py-3 bg-bengal-gold text-gray-900 font-semibold text-lg rounded-full shadow-lg hover:bg-yellow-400 transition transform hover:scale-105 duration-300">
+                    Start Exploring
+                </a>
+            </div>
+        </section>
+
+        <!-- Main Tourist Destinations Section with LLM Integration --><section id="destinations" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold text-bengal-green mb-3">Our Top Destinations</h3>
+                <p class="text-gray-600 text-lg">Experience the hills, the city, the sea, and the wilderness in one state.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Destination Card 1: Darjeeling --><div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 transform hover:-translate-y-1">
+                    <img src="https://www.siliconindia.com/travelcity/images/special_images/a71lKc32wzZAUWV.jpeg" alt="Himalayan hills of Darjeeling" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <!-- Added Mountain Icon --><h4 class="text-2xl font-bold text-bengal-green mb-2">Darjeeling</h4>
+                        <span class="inline-block text-sm font-medium text-white bg-bengal-green px-3 py-1 rounded-full mb-3">Queen of Hills</span>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Famous for panoramic views of Mt. Kanchenjunga, sprawling tea plantations, and the iconic UNESCO World Heritage 'Toy Train' (DHR).
+                        </p>
+                        <!-- Added two-button group --><div class="space-y-3">
+                            <button onclick="openItineraryInput('Darjeeling')" class="flex items-center justify-center w-full py-2 bg-bengal-blue text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300">
+                                ✨ Plan Trip Idea
+                            </button>
+                            <a href="https://www.google.com/search?q=Darjeeling+tourist+places" target="_blank" class="block text-center w-full py-2 bg-gray-100 text-bengal-green font-semibold rounded-lg border border-bengal-green hover:bg-gray-200 transition duration-300">
+                                Know More &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination Card 2: Kolkata --><div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 transform hover:-translate-y-1">
+                    <img src="https://wiredtales.com/wp-content/uploads/2020/10/howrah-bridge.jpg" alt="Victoria Memorial in Kolkata" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <!-- Added Building Icon --><h4 class="text-2xl font-bold text-bengal-green mb-2"> Kolkata</h4>
+                        <span class="inline-block text-sm font-medium text-white bg-bengal-gold px-3 py-1 rounded-full mb-3">The City of Joy</span>
+                        <p class="text-gray-700 text-sm mb-4">
+                            India's cultural capital, blending colonial architecture like the Victoria Memorial and Howrah Bridge with vibrant street life.
+                        </p>
+                        <!-- Added two-button group --><div class="space-y-3">
+                            <button onclick="openItineraryInput('Kolkata')" class="flex items-center justify-center w-full py-2 bg-bengal-blue text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300">
+                                ✨ Plan Trip Idea
+                            </button>
+                            <a href="https://www.google.com/search?q=Kolkata+tourist+places" target="_blank" class="block text-center w-full py-2 bg-gray-100 text-bengal-green font-semibold rounded-lg border border-bengal-green hover:bg-gray-200 transition duration-300">
+                                Know More &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination Card 3: Sundarbans --><div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 transform hover:-translate-y-1">
+                    <img src="https://c.ndtvimg.com/2019-07/oh54umbo_tiger-generic-pixabay_650x400_29_July_19.jpg?downsize=545:307" alt="Mangrove forest of Sundarbans" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <!-- Added Tiger Icon --><h4 class="text-2xl font-bold text-bengal-green mb-2"> Sundarbans</h4>
+                        <span class="inline-block text-sm font-medium text-white bg-bengal-blue px-3 py-1 rounded-full mb-3">Tiger Reserve</span>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Home to the largest mangrove forest in the world. Take a thrilling boat safari through its winding creeks to spot the Royal Bengal Tiger.
+                        </p>
+                        <!-- Added two-button group --><div class="space-y-3">
+                            <button onclick="openItineraryInput('Sundarbans')" class="flex items-center justify-center w-full py-2 bg-bengal-blue text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300">
+                                ✨ Plan Trip Idea
+                            </button>
+                            <a href="https://www.google.com/search?q=Sundarbans+tourist+places" target="_blank" class="block text-center w-full py-2 bg-gray-100 text-bengal-green font-semibold rounded-lg border border-bengal-green hover:bg-gray-200 transition duration-300">
+                                Know More &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination Card 4: Digha & Coastal Belt --><div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500 transform hover:-translate-y-1">
+                    <img src="https://hblimg.mmtcdn.com/content/hubble/img/desttvimg/mmt/destination/m_Digha_tv_destination_img_1_l_821_1321.jpg" alt="Digha Sea Beach" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <!-- Added Beach Icon --><h4 class="text-2xl font-bold text-bengal-green mb-2">Digha</h4>
+                        <span class="inline-block text-sm font-medium text-white bg-bengal-blue px-3 py-1 rounded-full mb-3">Coastal Retreat</span>
+                        <p class="text-gray-700 text-sm mb-4">
+                            West Bengal's most popular sea resort, known for its shallow sand beaches and casuarina plantations along the coast.
+                        </p>
+                        <!-- Added two-button group --><div class="space-y-3">
+                            <button onclick="openItineraryInput('Digha & Coastal Belt')" class="flex items-center justify-center w-full py-2 bg-bengal-blue text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300">
+                                ✨ Plan Trip Idea
+                            </button>
+                            <a href="https://www.google.com/search?q=Digha+tourist+places" target="_blank" class="block text-center w-full py-2 bg-gray-100 text-bengal-green font-semibold rounded-lg border border-bengal-green hover:bg-gray-200 transition duration-300">
+                                Know More &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cultural and Heritage Spotlight Section --><section id="heritage" class="py-16 md:py-24 bg-bg-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-bengal-green mb-3">Heritage & Culture Hubs</h3>
+                    <p class="text-gray-600 text-lg">Delve into the artistic and historical roots of Bengal.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Shantiniketan Block --><div class="flex flex-col md:flex-row bg-white rounded-xl shadow-2xl p-6 lg:p-8 hover:shadow-3xl transition duration-500">
+                        <img src="https://assets.cntraveller.in/photos/60ba10c88c5b530e12127247/16:9/w_1920,h_1080,c_limit/Shantiniketan.jpg" alt="Shantiniketan University Campus" class="w-full md:w-56 h-48 md:h-auto object-cover rounded-xl md:rounded-l-xl md:rounded-r-none mb-4 md:mb-0 md:mr-6">
+                        <div>
+                            <!-- Added Tree Icon --><h4 class="text-3xl font-bold text-bengal-gold mb-2"> Shantiniketan</h4>
+                            <p class="text-gray-700 mb-4">
+                                Established by Nobel Laureate Rabindranath Tagore, Shantiniketan ("Abode of Peace") is an artistic, educational, and cultural hub. It is renowned for the Visva-Bharati University.
+                            </p>
+                            <!-- Updated link to functional Know More --><a href="https://www.google.com/search?q=Shantiniketan+tourist+places" target="_blank" class="text-bengal-green font-semibold hover:text-bengal-blue transition duration-300">Know More &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Bishnupur Block --><div class="flex flex-col md:flex-row bg-white rounded-xl shadow-2xl p-6 lg:p-8 hover:shadow-3xl transition duration-500">
+                        <img src="https://traveltear.com/wp-content/uploads/2019/04/History-and-Life-Lessons-from-Bishnupur-in-West-Bengal-1000x750.jpeg" alt="Terracotta Temples of Bishnupur" class="w-full md:w-56 h-48 md:h-auto object-cover rounded-xl md:rounded-l-xl md:rounded-r-none mb-4 md:mb-0 md:mr-6">
+                        <div>
+                            <!-- Added Brick Icon --><h4 class="text-3xl font-bold text-bengal-gold mb-2"> Bishnupur</h4>
+                            <p class="text-gray-700 mb-4">
+                                Famous for its exquisite Terracotta Temples built by the Malla kings, Bishnupur showcases a unique architectural style and rich history. It is also a center for Baluchari sarees.
+                            </p>
+                            <!-- Updated link to functional Know More --><a href="https://www.google.com/search?q=Bishnupur+tourist+places" target="_blank" class="text-bengal-green font-semibold hover:text-bengal-blue transition duration-300">Know More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section: Plan Your Journey --><section id="contact" class="py-16 bg-bengal-green">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-3xl font-extrabold text-white mb-4">Ready to Explore West Bengal?</h3>
+                <p class="text-lg text-gray-200 mb-8">
+                    Contact us or find official tourism packages to plan your perfect trip, from the snow-capped mountains to the crashing waves.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="mailto:wonderlightadventure@gmail.com" class="px-8 py-3 bg-white text-bengal-green font-semibold rounded-full shadow-lg hover:bg-gray-100 transition transform hover:scale-105 duration-300">
+                        Email WonderlightAdventure
+                    </a>
+                    <!-- Link remains active to open tour packages in a new tab -->
+                    <a href="https://www.wonderlightadventure.com/packages" target="_blank" class="px-8 py-3 bg-bengal-gold text-gray-900 font-semibold rounded-full shadow-lg hover:bg-yellow-400 transition transform hover:scale-105 duration-300">
+                        View Tour Packages
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Itinerary Planner Modal (LLM Integration) -->
+    <div id="itineraryModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 z-50 hidden items-center justify-center p-4" onclick="closeModal()">
+        <div class="bg-white rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-8 transform transition-all duration-300 scale-100" onclick="event.stopPropagation()">
+            
+            <h3 id="modalTitle" class="text-3xl font-bold text-bengal-green mb-4 border-b pb-2">Plan Your Trip</h3>
+            <div id="modalContent" class="text-gray-700 space-y-4">
+                
+                <!-- Input Form Section (Always visible initially) -->
+                <div id="inputFormSection">
+                    <p class="text-lg mb-4">Tell us about your trip to <span id="currentDestinationName" class="font-bold text-bengal-blue"></span>:</p>
+                    <input type="hidden" id="destinationInput">
+                    
+                    <div class="mb-4">
+                        <label for="durationInput" class="block text-sm font-medium text-gray-700 mb-1">Trip Duration (e.g., 3 days):</label>
+                        <input type="text" id="durationInput" placeholder="e.g. 3 days" value="4 days"
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bengal-blue focus:border-bengal-blue transition duration-200">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="styleInput" class="block text-sm font-medium text-gray-700 mb-1">Travel Style (e.g., family with kids, solo budget):</label>
+                        <input type="text" id="styleInput" placeholder="e.g. cultural experience, solo budget trip" value="couple seeking luxury and relaxation"
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bengal-blue focus:border-bengal-blue transition duration-200">
+                    </div>
+
+                    <button onclick="generateItinerary()" class="w-full py-3 bg-bengal-green text-white font-bold rounded-lg shadow-md hover:bg-green-700 transition duration-300 flex items-center justify-center">
+                        Generate Itinerary Idea
+                    </button>
+                </div>
+
+                <!-- Result/Loading Section (Hidden initially) -->
+                <div id="resultSection" class="hidden">
+                    <!-- Loading Indicator -->
+                    <p id="loadingIndicator" class="text-center text-bengal-blue font-medium flex flex-col items-center justify-center py-12">
+                        <svg class="animate-spin h-8 w-8 text-bengal-blue mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                        Crafting your personalized West Bengal journey...
+                    </p>
+                    
+                    <!-- Generated Text Display -->
+                    <div id="itineraryResult" class="prose max-w-none pt-4 border-t border-gray-200"></div>
+                    
+                    <!-- Sources Container -->
+                    <div id="sourcesContainer" class="mt-6 pt-4 border-t border-gray-200 hidden">
+                        <p class="text-sm font-semibold text-gray-500 mb-2">Sources:</p>
+                        <ul id="sourcesList" class="list-disc pl-5 text-xs text-gray-600 space-y-1"></ul>
+                    </div>
+                </div>
+
+            </div>
+            <button onclick="closeModal()" class="mt-6 px-6 py-2 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 transition duration-300">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer --><footer class="bg-gray-800 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm">&copy; 2025 WonderlightAdventure. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4 text-gray-400">
+                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
+                <a href="#" class="hover:text-white transition duration-300">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gemini API Integration Script --><script>
+        // Set API key placeholder. This will be automatically filled at runtime.
+        const apiKey = "";
+        const apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent';
+
+        // --- Utility Functions ---
+
+        // Function to configure marked.js (markdown parser)
+        function configureMarked() {
+            // Configure marked.js to open links in a new tab
+            const renderer = new marked.Renderer();
+            const linkRenderer = renderer.link;
+            renderer.link = (href, title, text) => {
+                const html = linkRenderer.call(renderer, href, title, text);
+                return html.replace(/^<a /, '<a target="_blank" rel="noopener noreferrer" ');
+            };
+            marked.setOptions({
+                renderer: renderer,
+                gfm: true, // Github Flavored Markdown
+                breaks: true, // Line breaks as <br>
+            });
+        }
+        
+        // Run configuration immediately to avoid ReferenceError: marked is not defined
+        configureMarked();
+
+        // Function for exponential backoff retry logic
+        async function exponentialBackoffFetch(url, options, maxRetries = 5) {
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (response.status === 429 && i < maxRetries - 1) {
+                        const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        continue;
+                    }
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response;
+                } catch (error) {
+                    if (i === maxRetries - 1) throw error;
+                    const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+        }
+
+        // --- Modal Control Functions ---
+
+        function openModal() {
+            document.getElementById('itineraryModal').classList.remove('hidden');
+            document.getElementById('itineraryModal').classList.add('flex');
+        }
+
+        function closeModal() {
+            document.getElementById('itineraryModal').classList.remove('flex');
+            document.getElementById('itineraryModal').classList.add('hidden');
+            // Reset modal content state
+            document.getElementById('inputFormSection').classList.remove('hidden');
+            document.getElementById('resultSection').classList.add('hidden');
+            document.getElementById('itineraryResult').innerHTML = '';
+            document.getElementById('sourcesList').innerHTML = '';
+        }
+
+        function showLoading() {
+            document.getElementById('loadingIndicator').classList.remove('hidden');
+            document.getElementById('itineraryResult').classList.add('hidden');
+            document.getElementById('sourcesContainer').classList.add('hidden');
+        }
+
+        function hideLoading() {
+            document.getElementById('loadingIndicator').classList.add('hidden');
+            document.getElementById('itineraryResult').classList.remove('hidden');
+        }
+
+        // Function to open the input form when a destination button is clicked
+        function openItineraryInput(destination) {
+            document.getElementById('destinationInput').value = destination;
+            document.getElementById('currentDestinationName').textContent = destination;
+            document.getElementById('modalTitle').textContent = `Plan Trip to ${destination}`;
+            
+            // Ensure only the input form is visible
+            document.getElementById('inputFormSection').classList.remove('hidden');
+            document.getElementById('resultSection').classList.add('hidden');
+            document.getElementById('itineraryResult').innerHTML = '';
+            document.getElementById('sourcesList').innerHTML = '';
+
+            openModal();
+        }
+
+        // --- Gemini API Call Function ---
+        
+        async function generateItinerary() {
+            const destination = document.getElementById('destinationInput').value;
+            const duration = document.getElementById('durationInput').value.trim();
+            const travelStyle = document.getElementById('styleInput').value.trim();
+
+            if (!duration || !travelStyle) {
+                document.getElementById('itineraryResult').innerHTML = `<p class="p-4 bg-red-100 text-red-700 rounded-lg shadow-md">Please specify both the duration and the travel style to generate a plan.</p>`;
+                document.getElementById('resultSection').classList.remove('hidden');
+                document.getElementById('inputFormSection').classList.add('hidden');
+                hideLoading();
+                return;
+            }
+
+            // Hide form, show loading
+            document.getElementById('inputFormSection').classList.add('hidden');
+            document.getElementById('resultSection').classList.remove('hidden');
+            showLoading();
+
+            const fullPrompt = `Generate a detailed, engaging travel itinerary for a ${duration} trip to ${destination}. The traveler profile is: "${travelStyle}".
+            The itinerary should be formatted using clear Markdown (including headings, lists, and bold text) and must use up-to-date, grounded information.
+            Structure the response day-by-day and include practical, specific recommendations for activities and accommodations based on the travel style.`;
+            
+            try {
+                const payload = {
+                    contents: [{ parts: [{ text: fullPrompt }] }],
+                    // Enable Google Search for grounded travel information
+                    tools: [{ "google_search": {} }],
+                    systemInstruction: {
+                        parts: [{ text: "You are a world-class, knowledgeable travel planner and tourism expert for West Bengal, India. Your response must be well-structured and use proper markdown for formatting. Respond only with the itinerary." }]
+                    },
+                };
+
+                const response = await exponentialBackoffFetch(`${apiUrl}?key=${apiKey}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    const text = candidate.content.parts[0].text;
+                    
+                    // Render markdown to HTML
+                    document.getElementById('itineraryResult').innerHTML = marked.parse(text); 
+
+                    // Handle Grounding Sources
+                    let sources = [];
+                    const groundingMetadata = candidate.groundingMetadata;
+                    if (groundingMetadata && groundingMetadata.groundingAttributions) {
+                        sources = groundingMetadata.groundingAttributions
+                            .map(attribution => ({
+                                uri: attribution.web?.uri,
+                                title: attribution.web?.title,
+                            }))
+                            .filter(source => source.uri && source.title);
+                    }
+
+                    const sourcesList = document.getElementById('sourcesList');
+                    sourcesList.innerHTML = ''; 
+
+                    if (sources.length > 0) {
+                        sources.forEach(source => {
+                            const listItem = document.createElement('li');
+                            listItem.innerHTML = `<a href="${source.uri}" target="_blank" class="text-bengal-blue hover:underline">${source.title}</a>`;
+                            sourcesList.appendChild(listItem);
+                        });
+                        document.getElementById('sourcesContainer').classList.remove('hidden');
+                    } else {
+                        document.getElementById('sourcesContainer').classList.add('hidden');
+                    }
+
+                } else {
+                    document.getElementById('itineraryResult').innerHTML = `<p class="p-4 text-red-700 bg-red-100 rounded-lg">Sorry, I couldn't generate a plan for you right now. The API returned an empty or invalid response.</p>`;
+                    document.getElementById('sourcesContainer').classList.add('hidden');
+                }
+
+            } catch (error) {
+                console.error('Gemini API Error:', error);
+                document.getElementById('itineraryResult').innerHTML = `<p class="p-4 text-red-700 bg-red-100 rounded-lg">An error occurred while connecting to the planning service. Please check your network or try again later.</p>`;
+                document.getElementById('sourcesContainer').classList.add('hidden');
+            } finally {
+                hideLoading();
+            }
+        }
+    </script>
+
+</body>
+</html>

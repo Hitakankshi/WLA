@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonderlight Adventure - Hotel Bookings</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .scroll-smooth-behavior {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="scroll-smooth-behavior text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="ho" class="flex items-center space-x-2">
+                <span class="text-xl md:text-2xl font-bold text-teal-600">Wonderlight Adventure</span>
+            </a>
+            
+            <!-- Mobile Menu Button -->
+<div class="hidden md:flex space-x-6">
+                <a href="home.html" class="text-gray-600 hover:text-teal-600 font-medium transition-colors duration-300">Home</a>
+                <a href="hotel.html" class="text-gray-600 hover:text-teal-600 font-medium transition-colors duration-300">Hotels</a>
+                <a href="aboutus.html" class="text-gray-600 hover:text-teal-600 font-medium transition-colors duration-300">About Us</a>
+                <a href="contactus.html" class="text-gray-600 hover:text-teal-600 font-medium transition-colors duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-teal-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+            <a href="home.html" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Home</a>
+            <a href="hotel.html" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Hotels</a>
+            <a href="aboutus.html" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">About Us</a>
+            <a href="contactus.html" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
+    </header>
+    <br><br>
+    <main class="container mx-auto px-6">
+        <script async src="https://tpwdgt.com/content?currency=inr&trs=456447&shmarker=659848&show_hotels=true&powered_by=true&locale=en&searchUrl=search.hotellook.com&primary_override=%23FF8E01&color_button=%23FF8E01&color_icons=%23FF8E01&secondary=%23FFFFFF&dark=%23262626&light=%23FFFFFF&special=%23C4C4C4&color_focused=%23FF8E01&border_radius=26&plain=true&promo_id=7873&campaign_id=101" charset="utf-8"></script>
+
+
+
+        <!-- Hero Section -->
+        <section id="home" class="py-16 md:py-24 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+                Discover Your Perfect Getaway
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                With Wonderlight Adventure, find and book your dream hotel effortlessly. Explore top destinations and exclusive deals, tailored just for you.
+            </p>
+            <a href="#booking" class="inline-block bg-teal-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-teal-700 transition-transform transform hover:scale-105 duration-300">
+                Start Your Adventure
+            </a>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-16 bg-white rounded-lg shadow-md">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-6 text-center">
+                    <div class="mb-4 text-teal-500">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Best Price Guarantee</h3>
+                    <p class="text-gray-600">We work with a vast network of hotels to bring you the best prices and exclusive discounts, every time.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="p-6 text-center">
+                    <div class="mb-4 text-teal-500">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">24/7 Customer Support</h3>
+                    <p class="text-gray-600">Our dedicated team is always available to assist you with any questions or issues, before or during your trip.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="p-6 text-center">
+                    <div class="mb-4 text-teal-500">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.5 3-9s-1.343-9-3-9m0 18v-6m0-6V3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Curated Experiences</h3>
+                    <p class="text-gray-600">We don't just book hotels. We offer unique packages and curated experiences that make your travel unforgettable.</p>
+                </div>
+            </div>
+        </section>
+<br>
+<br>
+        <!-- Top Destinations Section -->
+        
+
+        <!-- Booking Form Section -->
+        <section id="booking" class="py-16 md:py-24 bg-teal-600 text-white rounded-lg shadow-md mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Ready to Book?</h2>
+            <script async src="https://tpwdgt.com/content?currency=inr&trs=456447&shmarker=659848&show_hotels=true&powered_by=true&locale=en&searchUrl=search.hotellook.com&primary_override=%23FF8E01&color_button=%23FF8E01&color_icons=%23FF8E01&secondary=%23FFFFFF&dark=%23262626&light=%23FFFFFF&special=%23C4C4C4&color_focused=%23FF8E01&border_radius=26&plain=true&promo_id=7873&campaign_id=101" charset="utf-8"></script>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-6">
+                <a href="#" class="text-2xl font-bold text-teal-400">Wonderlight Adventure</a>
+            </div>
+            <div class="mb-6 space-x-6 text-gray-400">
+                <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors duration-300">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-colors duration-300">Sitemap</a>
+            </div>
+            <div class="flex justify-center space-x-4 mb-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.99 0H7.01C3.13 0 0 3.13 0 7.01v9.98c0 3.88 3.13 7.01 7.01 7.01h9.98c3.88 0 7.01-3.13 7.01-7.01V7.01c0-3.88-3.13-7.01-7.01-7.01zM12 18a6 6 0 110-12 6 6 0 010 12z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.25 6.04a8.88 8.88 0 01-2.43.67 4.54 4.54 0 001.99-2.35 9.07 9.07 0 01-2.7 1.03 4.53 4.53 0 00-7.74 4.12 12.86 12.86 0 01-9.3-4.73 4.53 4.53 0 001.4 6.04 4.5 4.5 0 01-2.05-.56v.05c0 2.22 1.58 4.07 3.67 4.49a4.54 4.54 0 01-2.04.08 4.54 4.54 0 004.23 3.15 9.08 9.08 0 01-5.63 1.94c-.37 0-.75-.02-1.12-.06a12.82 12.82 0 006.94 2.03c8.33 0 12.88-6.9 12.88-12.88 0-.2-.01-.4-.01-.6a9.23 9.23 0 002.26-2.35z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.8 3.5H5.2c-1.8 0-3.2 1.4-3.2 3.2v12.8c0 1.8 1.4 3.2 3.2 3.2h13.6c1.8 0 3.2-1.4 3.2-3.2V6.7c0-1.8-1.4-3.2-3.2-3.2zM7.2 20.3V9.5h3.4v10.8H7.2zm10.8 0h-3.4v-6.7c0-.9.1-1.8.8-2.4.6-.6 1.5-1 2.3-1 .8 0 1.4.3 1.8.7.4.4.6 1 .6 1.7v6.7zm-8.8-10.8V7.3h3.4v2.2H9.2z"></path>
+                    </svg>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2024 Wonderlight Adventure. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+        
+            // Toggle mobile menu visibility
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth scroll for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - (window.innerHeight < 768 ? 64 : 80), // Adjust for header height on mobile vs desktop
+                            behavior: 'smooth'
+                        });
+                        // Close mobile menu after clicking a link
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

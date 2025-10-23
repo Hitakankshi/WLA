@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="/css/demo.css">
+</head>
+<body>
+    <header class="sticky-header">
+        <nav class="navbar">
+            <div class="nav-left">
+                <button class="menu-btn" id="menuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo-container">
+                    <img src="/image/WonderlightAdventureLogo.jpg" alt="Wonderlight Adventure Logo" class="logo-img">
+                    <span class="logo-text">Wonderlight Adventure</span>
+                </div>
+            </div>
+            
+            <div class="nav-right" id="navRight">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/html/home.html" class="active">Home</a></li>
+                    <li><a href="/html/aboutus.html">About Us</a></li>
+                    <li><a href="/html/package.html">Package</a></li>
+                    <li><a href="/html/gallary.html">Gallery</a></li>
+                    <li><a href="/html/contactus.html">Contact Us</a></li>
+                    <li><a href="/html/login.html" class="login-btn">Login</a></li>
+                </ul>
+                <div class="search-container" id="searchContainer">
+                    <input type="text" placeholder="Search adventure..." id="searchInput">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div id="register-form">
+            <h2>Register</h2>
+            <form id="register">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob">
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city">
+                </div>
+                <div class="form-group">
+                    <label for="zip">Zip Code</label>
+                    <input type="text" id="zip">
+                </div>
+                <div class="form-group">
+                    <label for="nationality">Nationality</label>
+                    <select id="nationality" required>
+                        <option value="">Select Nationality</option>
+                        <option value="US">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="CA">Canada</option>
+                        <option value="AU">Australia</option>
+                        <option value="IN">India</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <p class="toggle-form">Already have an account? <a href="/html/demo2.html">Login</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="/java script/demo.js"></script>
+</body>
+</html>

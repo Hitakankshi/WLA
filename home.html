@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonderlight Adventure</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="sticky-header">
+        <nav class="navbar">
+            <div class="nav-left">
+                <button class="menu-btn" id="menuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo-container">
+                    <img src="/image/WonderlightAdventureLogo.jpg" alt="Wonderlight Adventure Logo" class="logo-img">
+                    <span class="logo-text">Wonderlight Adventure</span>
+                </div>
+            </div>
+
+            <div class="nav-right" id="navRight">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/html/home.html" style="color: black; font-weight: bold; font-size: 18px;">Home</a></li>
+                    <li><a href="/html/aboutus.html">About Us</a></li>
+                    <li><a href="/html/package.html"> Holiday Package</a></li>
+                    <li><a href="/html/gallary.html">Gallery</a></li>
+                    <li><a href="/html/contactus.html">Contact Us</a></li>
+                    <li><a href="/html/login.html" class="login-btn">Login</a></li>
+                </ul>
+                <div class="search-container" id="searchContainer">
+                    <input type="text" placeholder="Search adventure..." id="searchInput">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                <!-- User profile (shown when logged in) -->
+                <div id="userProfile" class="user-profile" style="display:none; margin-left:16px; text-align:right;">
+                    <div id="userName" style="font-weight:600"></div>
+                    <div id="userEmail" style="font-size:0.9em; color:#555"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <header class="about-header">
+        <h1>Explore the World with Our Exclusive Travel Packages</h1>
+        <p>Discover breathtaking destinations with handpicked experiences at unbeatable prices.</p>
+    </header>
+
+    <h1 class="package-heading">Our Packages</h1>
+
+    <div class="scroll-container">
+        <button class="scroll-button left">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="destinations-scroll">
+            <div class="destination-card">
+                <a href="" class="destination-image-link">
+                    <img src="https://www.patratravels.com/wp-content/uploads/2021/11/Winter-Tourist-Places-in-Odisha.jpg" alt="Odisha">
+                </a>
+                <div class="destination-name">Odisha</div>
+                <div class="price-info">
+
+                    <span class="discount">20% OFF</span>
+                </div>
+                <div class="action-buttons">
+                    <a href="odishaknowmore.html" class="know-more-btn">Know More</a>
+                    <a href="odishabooknow.html" class="book-now-btn">Book Now</a>
+                </div>
+            </div>
+            <div class="destination-card">
+                <a href="" class="destination-image-link">
+                    <img src="https://t3.ftcdn.net/jpg/01/45/05/96/360_F_145059639_HkURCzmfUA5MXw6FbqPeks6FozkJD8OK.jpg" alt="Westbangle">
+                </a>
+                <div class="destination-name">Westbangle</div>
+                <div class="price-info">
+
+                    <span class="discount">10% OFF</span>
+                </div>
+                <div class="action-buttons">
+                    <a href="westbangleknowmore.html" class="know-more-btn">Know More</a>
+                    <a href="westbanglebooknow.html" class="book-now-btn">Book Now</a>
+                </div>
+            </div>
+            <div class="destination-card">
+                <a href="" class="destination-image-link">
+                    <img src="https://www.trawell.in/admin/images/upload/76393836Agra_Main.jpg" alt="Uttarpradesh">
+                </a>
+                <div class="destination-name">Uttarpradesh</div>
+                <div class="price-info">
+
+                    <span class="discount">20% OFF</span>
+                </div>
+                <div class="action-buttons">
+                    <a href="uttarpradeshknowmore.html" class="know-more-btn">Know More</a>
+                    <a href="odishabooknow.html" class="book-now-btn">Book Now</a>
+                </div>
+            </div>
+            <div class="destination-card">
+                <a href="" class="destination-image-link">
+                    <img src="https://gandhisagarforestretreat.com/wp-content/uploads/2024/06/BLOG-head-title-1-1.webp" alt="Madhya Pradesh">
+                </a>
+                <div class="destination-name">Madhya Pradesh</div>
+                <div class="price-info">
+
+                    <span class="discount">20% OFF</span>
+                </div>
+                <div class="action-buttons">
+                    <a href="madhyapradeshknowmore.html" class="know-more-btn">Know More</a>
+                    <a href="odishabooknow.html" class="book-now-btn">Book Now</a>
+                </div>
+            </div>
+            <div class="destination-card">
+                <a href="" class="destination-image-link">
+                    <img src="https://www.exploreourindia.com/backend/web/images/state/2319_Chhattisgarh%20famous%20tourist%20places.webp" alt="Chhattisgarh">
+                </a>
+                <div class="destination-name">Chhattisgarh</div>
+                <div class="price-info">
+
+                    <span class="discount">20% OFF</span>
+                </div>
+                <div class="action-buttons">
+                    <a href="chhisgharknowmore.html" class="know-more-btn">Know More</a>
+                    <a href="odishabooknow.html" class="book-now-btn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <a href="" class="destination-image-link">
+                    <img src="https://4.bp.blogspot.com/-7A8yyNn7o8U/VKZovO3SZlI/AAAAAAAAGm8/H-NcZeZInGA/s1600/Charminar-Hyderabad.jpg">
+                </a>
+                <div class="destination-name">Andhra Pradesh</div>
+                <div class="price-info">
+
+                    <span class="discount">20% OFF</span>
+                </div>
+                <div class="action-buttons">
+                    <a href="Andhrapradeshknowmore.html" class="know-more-btn">Know More</a>
+                    <a href="odishabooknow.html" class="book-now-btn">Book Now</a>
+                </div>
+            </div>
+            <div class="destination-card">
+                <a href="" class="destination-image-link">
+                    <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTkx87YRNTki6e4mumZJS6iyxhO8SKPHTgD3qDloyefyJyw6ecUeH5WsAqIosp99doWq0YgyQ21J7WDqW6x6WTtaIKjElqGD1tG45ArTw" alt="Bihar">
+                </a>
+                <div class="destination-name">Bihar</div>
+                <div class="price-info">
+
+                    <span class="discount">20% OFF</span>
+                </div>
+                <div class="action-buttons">
+                    <a href="Biharknowmore.html" class="know-more-btn">Know More</a>
+                    <a href="odishabooknow.html" class="book-now-btn">Book Now</a>
+                </div>
+            </div>
+            <div class="destination-card">
+                <a href="" class="destination-image-link">
+                    <img src="https://tourism.jharkhand.gov.in/app-assets/image/History1.jpg" alt="Jharkhand">
+                </a>
+                <div class="destination-name">Jharkhand</div>
+                <div class="price-info">
+
+                    <span class="discount">20% OFF</span>
+                </div>
+                <div class="action-buttons">
+                    <a href="jharkhandknowmore.html" class="know-more-btn">Know More</a>
+                    <a href="odishabooknow.html" class="book-now-btn">Book Now</a>
+                </div>
+            </div>
+             <div class="destination-card">
+                <a href="" class="destination-image-link">
+                    <img src="https://travelandtrekking.com/wp-content/uploads/2020/09/kerala-pics-800x450.jpg" alt="Keral">
+                </a>
+                <div class="destination-name">Kerala</div>
+                <div class="price-info">
+
+                    <span class="discount">20% OFF</span>
+                </div>
+                <div class="action-buttons">
+                    <a href="jharkhandknowmore.html" class="know-more-btn">Know More</a>
+                    <a href="odishabooknow.html" class="book-now-btn">Book Now</a>
+                </div>
+            </div>
+            <div class="destination-card">
+                <a href="" class="destination-image-link">
+                    <img src="https://swastiktours.com/wp-content/uploads/2024/05/5.-Pratapgarh-Fort-Mahabaleshwar-600x400-1.jpg" alt="Maharastra">
+                </a>
+                <div class="destination-name">Maharastra</div>
+                <div class="price-info">
+
+                    <span class="discount">20% OFF</span>
+                </div>
+                <div class="action-buttons">
+                    <a href="jharkhandknowmore.html" class="know-more-btn">Know More</a>
+                    <a href="odishabooknow.html" class="book-now-btn">Book Now</a>
+                </div>
+            </div>
+            <div class="destination-card">
+                <a href="" class="destination-image-link">
+                    <img src="https://www.jollydaytours.com/uploads/0000/1/2020/12/16/goa-feature-2.jpg" alt="Goa">
+                </a>
+                <div class="destination-name">Goa</div>
+                <div class="price-info">
+
+                    <span class="discount">20% OFF</span>
+                </div>
+                <div class="action-buttons">
+                    <a href="goaknowmore.html" class="know-more-btn">Know More</a>
+                    <a href="odishabooknow.html" class="book-now-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="scroll-button right">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <div class="travel-video-container">
+        <div class="video-wrapper">
+            <video class="travel-video" poster="https://example.com/poster-image.jpg" controls>
+                <source src="your-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">
+                <button class="play-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="travel-description">
+            <span class="destination-tag">Featured Destination</span>
+            <h2>Explore the India.</h2>
+            <p class="destination-description">
+                Experience paradise on earth with our exclusive Maldives packages. Crystal clear waters, pristine beaches, and luxury overwater bungalows await you in this tropical haven.
+            </p>
+            <div class="highlights">
+                <div class="highlight-item">
+                    <svg class="highlight-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4CAF50">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span>Private beach access</span>
+                </div>
+                <div class="highlight-item">
+                    <svg class="highlight-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4CAF50">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span>All-inclusive packages</span>
+                </div>
+                <div class="highlight-item">
+                    <svg class="highlight-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4CAF50">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span>Snorkeling & diving</span>
+                </div>
+            </div>
+            <button class="cta-button">Explore Packages</button>
+        </div>
+    </div>
+
+    <section class="why-us">
+        <h2>Why Choose DreamVoyage?</h2>
+        <div class="benefits">
+            <div class="benefit-item">
+                <i class="fas fa-tag"></i>
+                <h3>Best Price Guarantee</h3>
+                <p>We match or beat any competitor's price!</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Customer Support</h3>
+                <p>Assistance before, during, and after your trip.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-pencil-alt"></i>
+                <h3>Customizable Packages</h3>
+                <p>Tailor your itinerary to fit your preferences.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-gift"></i>
+                <h3>Exclusive Deals</h3>
+                <p>Early bird discounts & group specials available.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-section">
+        <div class="container">
+            <h2>Connect With Us</h2>
+            <p>Follow our adventures and get travel inspiration!</p>
+            <div class="social-links">
+                <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/yourpage" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/yourpage" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://pinterest.com/yourpage" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="about-footer">
+        <div class="container">
+            <p>Ready to start your next adventure? <a href="/html/contactus.html">Contact us</a> today!</p>
+            <p>&copy; 2023 Wanderlust Adventures. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/java script/home-auth.js"></script>
+    <script src="/java script/home.js"></script>
+</body>
+
+</html>

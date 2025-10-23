@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Wanderlust Travel Agency</title>
+    <link rel="stylesheet" href="/css/contactus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="sticky-header">
+        <nav class="navbar">
+            <div class="nav-left">
+                <button class="menu-btn" id="menuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo-container">
+                    <img src="/image/WonderlightAdventureLogo.jpg" alt="Wonderlight Adventure Logo" class="logo-img">
+                    <span class="logo-text">Wonderlight Adventure</span>
+                </div>
+            </div>
+            
+            <div class="nav-right" id="navRight">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/html/home.html">Home</a></li>
+                    <li><a href="/html/aboutus.html">About Us</a></li>
+                    <li><a href="/html/package.html">Package</a></li>
+                    <li><a href="/html/gallary.html">Gallery</a></li>
+                    <li><a href="/html/contactus.html" style="color: black; font-weight: bold; font-size: 18px;">Contact Us</a></li>
+                    <li><a href="/html/login.html" class="login-btn">Login</a></li>
+                </ul>
+                <div class="search-container" id="searchContainer">
+                    <input type="text" placeholder="Search adventure..." id="searchInput">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="container">
+        <header class="about-header">
+            <h1>Let's Plan Your Next Adventure</h1>
+            <p>Our travel experts are ready to help you create unforgettable memories. Reach out to us today!</p>
+        </header>
+
+        <div class="contact-container">
+            <section class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </section>
+
+            <section class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Our Office</h4>
+                    <p>123 Adventure Lane<br>Travel City, TC 12345</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Call Us</h4>
+                    <p>+1 (800) 555-ADVENTURE<br>Mon-Fri: 9am-6pm EST</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email Us</h4>
+                    <p>info@wanderlusttravel.com<br>inquiries@wanderlusttravel.com</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h4>Office Hours</h4>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                </div>
+            </section>
+        </div>
+
+        <section class="map-section">
+            <h3>Find Us on the Map</h3>
+            <div class="map-container">
+                <!-- Embed Google Map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215573291864!2d-73.9878449241644!3d40.74844097138948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1629999999999!5m2!1sen!2sus" 
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Wanderlust Travel</h4>
+                    <p class="para">Creating unforgettable travel experiences since 2005. Let us help you discover the world.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li class="li"><a href="/html/home.html">Home</a></li>
+                        <li class="li"><a href="/html/aboutus.html">About Us</a></li>
+                        <li class="li"><a href="/html/package.html">Package</a></li>
+                        <li class="li"><a href="/html/gallary.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p class="para"><i class="fas fa-map-marker-alt"></i> 123 Adventure Lane, Travel City</p>
+                    <p class="para"><i class="fas fa-phone-alt"></i> +1 (800) 555-ADVENTURE</p>
+                    <p class="para"><i class="fas fa-envelope"></i> info@wanderlusttravel.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Wanderlust Travel Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/java script/contactus.js"></script>
+</body>
+</html>

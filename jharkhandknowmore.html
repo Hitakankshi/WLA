@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonderlight Adventure: Explore Jharkhand's Hidden Gems</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for custom styles and Inter font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light Blue Gray Background */
+        }
+        .hero-bg {
+            background-image: linear-gradient(135deg, rgba(23, 107, 135, 0.8), rgba(0, 150, 136, 0.8)), url('https://placehold.co/1200x500/065f46/ffffff?text=Jharkhand+Lush+Greenery');
+            background-size: cover;
+            background-position: center;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Hero Section -->
+    <header class="hero-bg text-white py-16 md:py-32 rounded-b-2xl shadow-xl">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+                Wonderlight Adventure: Discover Jharkhand's Magical Beauty
+            </h1>
+            <p class="text-xl md:text-2xl font-light max-w-3xl mx-auto">
+                Discover spectacular waterfalls, ancient temples, serene hill stations, and rich tribal culture.
+            </p>
+            <div class="mt-8">
+                <a href="#destinations" class="inline-block bg-white text-teal-800 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                    Start Your Journey
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12 md:py-20">
+
+        <!-- Overview Section -->
+        <section class="mb-16">
+            <div class="bg-teal-50 border-l-4 border-teal-600 p-6 rounded-xl shadow-md">
+                <h2 class="text-2xl font-bold text-teal-800 mb-3">Welcome to Jharkhand</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    Jharkhand is a treasure trove of natural beauty, lying mostly on the Chota Nagpur Plateau. Known for its mineral wealth and dense forests, its tourism revolves around breathtaking waterfalls, pristine wildlife sanctuaries, and some of the most revered pilgrimage sites in India. Get ready to explore the serene heart of Eastern India!
+                </p>
+            </div>
+        </section>
+
+        <!-- Top Destinations Section -->
+        <section id="destinations" class="mb-20">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-8 text-center border-b-2 border-teal-600 pb-3">Top Tourist Destinations</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Card 1: Ranchi -->
+                <div class="card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img class="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/43/4f/16/img-20171104-101501-largejpg.jpg?w=900&h=500&s=1" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/43/4f/16/img-20171104-101501-largejpg.jpg?w=900&h=500&s=1" alt="Ranchi Waterfall View" onerror="this.onerror=null; this.src='https://placehold.co/600x400/0e7490/ffffff?text=Ranchi';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-teal-700 mb-2">Ranchi - The City of Waterfalls</h3>
+                        <p class="text-gray-600 text-sm">
+                            The capital city is famous for its numerous cascades. Key attractions include <strong class="text-teal-600">Hundru Falls</strong> (dropping 320 ft), <strong class="text-teal-600">Dassam Falls</strong>, <strong class="text-teal-600">Jagannath Temple</strong> (a replica of the Puri temple), and <strong class="text-teal-600">Tagore Hill</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Deoghar -->
+                <div class="card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="https://avathioutdoors.gumlet.io/travelGuide/dev/deoghar43222.jpg" alt="Baidyanath Temple View" onerror="this.onerror=null; this.src='https://placehold.co/600x400/be123c/ffffff?text=Deoghar';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-teal-700 mb-2">Deoghar - Spiritual Hub</h3>
+                        <p class="text-gray-600 text-sm">
+                            A sacred destination for pilgrims, housing the <strong class="text-teal-600">Baba Baidyanath Temple</strong>, one of the twelve Jyotirlingas in India. Also visit <strong class="text-teal-600">Trikut Hill</strong> and <strong class="text-teal-600">Basukinath Temple</strong>.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Card 3: Netarhat -->
+                <div class="card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="https://5.imimg.com/data5/SELLER/Default/2022/11/LL/KB/RS/55292507/screenshot-2022-11-02-133943.jpg" alt="Netarhat Hill View" onerror="this.onerror=null; this.src='https://placehold.co/600x400/4d7c0f/ffffff?text=Netarhat';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-teal-700 mb-2">Netarhat - Queen of Chotanagpur</h3>
+                        <p class="text-gray-600 text-sm">
+                            A stunning hill station known for its magnificent sunrises and sunsets, especially from <strong class="text-teal-600">Magnolia Point</strong>. Nearby attractions include <strong class="text-teal-600">Lodh Falls</strong> (the highest in Jharkhand).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Jamshedpur -->
+                <div class="card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="https://framerusercontent.com/images/FxnrTzERnSzKEbm2hlc9WEtpuk.jpeg?width=500&height=281" alt="Jubilee Park View" onerror="this.onerror=null; this.src='https://placehold.co/600x400/84cc16/ffffff?text=Jamshedpur';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-teal-700 mb-2">Jamshedpur - The Steel City</h3>
+                        <p class="text-gray-600 text-sm">
+                            India's first planned industrial city, offering a mix of urban development and nature. Visit <strong class="text-teal-600">Jubilee Park</strong>, <strong class="text-teal-600">Dalma Wildlife Sanctuary</strong>, and the serene <strong class="text-teal-600">Dimna Lake</strong>.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Nature & Pilgrimage Highlights -->
+        <section class="mb-20">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-8 text-center border-b-2 border-teal-600 pb-3">Wildlife, History & Pilgrimage</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Pillar 1: Waterfalls & Scenery (Expanded) -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
+                    <h3 class="text-2xl font-bold text-blue-700 mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c-2 3-4 4.5-4 4.5S6 8.5 6 4s3.5-2 3.5-2v20c0 1.1.9 2 2 2s2-.9 2-2v-3.5"></path></svg>
+                        Natural Wonders
+                    </h3>
+                    <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                        <li><strong>Patratu Valley & Dam:</strong> Breathtaking winding roads, panoramic views, and the large artificial reservoir.</li>
+                        <li><strong>Jonha Falls:</strong> Known as Gautam Dhara, accessible by descending 500 steps.</li>
+                        <li><strong>Usri Falls (Giridih):</strong> Gushing cascade from the Parasnath Hills.</li>
+                        <li><strong>Maithon Lake (Dhanbad):</strong> A serene reservoir on the Barakar River, excellent for boating and picnics.</li>
+                        <li><strong>Dimna Lake (Jamshedpur):</strong> A scenic lake at the foothills of Dalma Hills, popular picnic spot.</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 2: Religious Sites (Expanded) -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-500">
+                    <h3 class="text-2xl font-bold text-red-700 mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        Sacred Destinations
+                    </h3>
+                    <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                        <li><strong>Parasnath Hill (Shikharji):</strong> The most important Jain pilgrimage site globally.</li>
+                        <li><strong>Rajrappa (Chhinnamasta Temple):</strong> A famous Shakti Peeth located at the confluence of the Damodar and Bhera rivers.</li>
+                        <li><strong>Maluti Village (Dumka):</strong> Known for its cluster of 72 ancient terracotta temples.</li>
+                        <li><strong>Dewri Temple (Ranchi):</strong> Known for its 16-armed idol of Goddess Durga.</li>
+                        <li><strong>Harihar Dham (Giridih):</strong> Famous for having one of the largest Shiva Lingams in the world.</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 3: Wildlife & History (Expanded) -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-500">
+                    <h3 class="text-2xl font-bold text-green-700 mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 17.6V20a1 1 0 001 1h2.4M21 17.6V20a1 1 0 01-1 1h-2.4M7 2.4H4a1 1 0 00-1 1v2.4m17 0V3.4a1 1 0 00-1-1h-2.4M12 12a5 5 0 11-10 0 5 5 0 0110 0z"></path></svg>
+                        Safaris & Heritage
+                    </h3>
+                    <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                        <li><strong>Betla National Park:</strong> Famous for wildlife, including tigers, and ancient <strong>Palamau Forts</strong> (ruins of the Chero dynasty) located within its boundaries.</li>
+                        <li><strong>Dalma Wildlife Sanctuary:</strong> Famous for its population of wild elephants.</li>
+                        <li><strong>Tribal Research Institute (Ranchi):</strong> Museum offering a deep insight into the culture and history of Jharkhand's indigenous tribes.</li>
+                        <li><strong>Hazaribagh Wildlife Sanctuary:</strong> A peaceful retreat for nature lovers and bird watchers.</li>
+                        <li><strong>Navratangarh (Gumla):</strong> Ruins of the former capital of the Nagvanshi dynasty.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Time to Visit Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-8 text-center border-b-2 border-teal-600 pb-3">Plan Your Trip: Best Time to Visit</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                
+                <!-- Winter -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-b-8 border-teal-500">
+                    <p class="text-4xl mb-3">❄️</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Winter (October to March)</h3>
+                    <p class="text-teal-600 font-semibold mb-2">Peak Season</p>
+                    <p class="text-sm text-gray-600">
+                        The most ideal time to visit. The weather is cool and pleasant (10°C to 25°C), perfect for sightseeing, wildlife safaris, and outdoor activities like trekking in Netarhat.
+                    </p>
+                </div>
+
+                <!-- Monsoon -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-b-8 border-teal-500">
+                    <p class="text-4xl mb-3">🌧️</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Monsoon (July to September)</h3>
+                    <p class="text-teal-600 font-semibold mb-2">Moderate Season</p>
+                    <p class="text-sm text-gray-600">
+                        The state transforms into a green paradise. Waterfalls like Hundru and Dassam are in their full, powerful glory. Great for nature photography, though travel can sometimes be challenging due to rain.
+                    </p>
+                </div>
+
+                <!-- Summer -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-b-8 border-teal-500">
+                    <p class="text-4xl mb-3">☀️</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Summer (April to June)</h3>
+                    <p class="text-teal-600 font-semibold mb-2">Off-Season</p>
+                    <p class="text-sm text-gray-600">
+                        Temperatures can be high (up to 40°C). Best for visiting cooler hill stations like Netarhat, exploring shaded temples, and getting better deals on accommodations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-teal-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg font-semibold mb-2">Start your adventure in Jharkhand today!</p>
+            <p class="text-sm">For more information, contact the official Jharkhand Tourism Development Corporation.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

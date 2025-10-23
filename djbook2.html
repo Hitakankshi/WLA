@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala Packages</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        /* Custom styles for the checkmark */
+        .list-item-checkmark::before {
+            content: '✔';
+            color: #22c55e; /* green-500 */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-right: 0.5rem;
+        }
+
+        /* Message box styling */
+        .message-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 2rem;
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: none;
+            text-align: center;
+        }
+
+        /* Hide scrollbar for a cleaner look */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="p-4 bg-gray-100">
+
+    <div class="flex flex-col items-center justify-center min-h-screen">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 my-8 text-center">Explore Odisha Packages</h1>
+
+        <!-- The main container for all cards with horizontal scroll -->
+        <div class="flex overflow-x-auto gap-8 p-4 snap-x snap-mandatory hide-scrollbar w-full max-w-7xl">
+
+            <!-- Card 1: Most Wanted Kerala Package -->
+            <div class="bg-white rounded-3xl shadow-lg overflow-hidden flex-shrink-0 w-80 sm:w-96 snap-center">
+                <div class="relative">
+                    <img class="w-full h-auto object-cover rounded-t-3xl" src="https://placehold.co/600x400/87CEEB/ffffff?text=Kerala+Houseboat" alt="Kerala Houseboat">
+                    <div class="absolute top-4 left-4 flex items-center space-x-2 bg-white/70 backdrop-blur-sm p-2 rounded-full pr-4">
+                        <span class="text-xs font-semibold text-gray-700">IN ASSOCIATION WITH</span>
+                        <img class="h-4 w-auto" src="https://www.oppo.com/content/dam/oppo/common/logo/oppo-logo-light.svg" alt="Oppo Logo">
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-xl md:text-2xl font-bold text-gray-800 leading-tight">4N - Most Wanted Kerala Package</h2>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">4N/5D</span>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-2">2N Munnar • 1N Thekkady • 1N Alleppey</p>
+                    <div class="mt-6 grid grid-cols-2 gap-4 text-sm text-gray-700">
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M3 5a2 2 0 114 0v2H4a2 2 0 01-2-2zM4 11a2 2 0 114 0v2H4a2 2 0 01-2-2zM12 5a2 2 0 100-4 2 2 0 000 4zM12 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                Round Trip Flights
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                3 Star Hotels & Houseboat
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm1 2v8h10V6H5zm3 3a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                                6 Activities
+                            </li>
+                        </ul>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Intercity Car Transfers
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Airport Transfers
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Selected Meals
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="mt-6 space-y-2 text-sm text-gray-700">
+                        <li class="list-item-checkmark">Spice Plantation Tour</li>
+                        <li class="list-item-checkmark">Visit to Alappuzha Beach, Periyar Lake, Eravikulam national park</li>
+                        <li class="list-item-checkmark">Visit to Tata Tea Museum, Valara Waterfalls, Mattupetty Dam</li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center text-sm">
+                        <div class="text-left mb-4 sm:mb-0">
+                            <p class="text-gray-500">Book this now by paying</p>
+                            <p class="font-semibold text-gray-800">only ₹2,000</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xl font-bold text-gray-800">₹36,706<span class="text-sm font-normal text-gray-500">/Person</span></p>
+                            <p class="text-xs text-gray-400 line-through">Total Price ₹73,412</p>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button class="w-full bg-blue-500 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105 book-now-btn">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: MakeMyTrip - Magical Kerala Holiday Package -->
+            <div class="bg-white rounded-3xl shadow-lg overflow-hidden flex-shrink-0 w-80 sm:w-96 snap-center">
+                <div class="relative">
+                    <img class="w-full h-auto object-cover rounded-t-3xl" src="https://placehold.co/600x400/22c55e/ffffff?text=Magical+Kerala" alt="Magical Kerala">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-xl md:text-2xl font-bold text-gray-800 leading-tight">Magical Kerala Holiday Package</h2>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">6N/5D</span>
+                    </div>
+                
+                    <div class="mt-6 grid grid-cols-2 gap-4 text-sm text-gray-700">
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M3 5a2 2 0 114 0v2H4a2 2 0 01-2-2zM4 11a2 2 0 114 0v2H4a2 2 0 01-2-2zM12 5a2 2 0 100-4 2 2 0 000 4zM12 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                Round Trip Flights
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                3 Star Hotels & Houseboat
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm1 2v8h10V6H5zm3 3a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                                6 Activities
+                            </li>
+                        </ul>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Intercity Car Transfers
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Airport Transfers
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Selected Meals
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="mt-6 space-y-2 text-sm text-gray-700">
+                        <li class="list-item-checkmark">Guided Tour</li>
+                        <li class="list-item-checkmark">Sightseeing as per itinerary</li>
+                         <li class="list-item-checkmark">Visit to Alappuzha Beach, Periyar Lake, Eravikulam national park</li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center text-sm">
+                        <div class="text-right w-full">
+                            <p class="text-xl font-bold text-gray-800">₹63,994<span class="text-sm font-normal text-gray-500">/Person</span></p>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button class="w-full bg-blue-500 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105 book-now-btn">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Yatra.com - Incredible Tour -->
+            <div class="bg-white rounded-3xl shadow-lg overflow-hidden flex-shrink-0 w-80 sm:w-96 snap-center">
+                <div class="relative">
+                    <img class="w-full h-auto object-cover rounded-t-3xl" src="https://placehold.co/600x400/93c5fd/ffffff?text=Incredible+Tour" alt="Incredible Tour">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-xl md:text-2xl font-bold text-gray-800 leading-tight">Incredible Tour to Kovalam & Kanyakumari</h2>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">3N</span>
+                    </div>
+                    
+                    <div class="mt-6 grid grid-cols-2 gap-4 text-sm text-gray-700">
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M3 5a2 2 0 114 0v2H4a2 2 0 01-2-2zM4 11a2 2 0 114 0v2H4a2 2 0 01-2-2zM12 5a2 2 0 100-4 2 2 0 000 4zM12 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                Round Trip Flights
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                3 Star Hotels & Houseboat
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm1 2v8h10V6H5zm3 3a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                                6 Activities
+                            </li>
+                        </ul>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Intercity Car Transfers
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Airport Transfers
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Selected Meals
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="mt-6 space-y-2 text-sm text-gray-700">
+                        <li class="list-item-checkmark">Sightseeing as per itinerary</li>
+                         <li class="list-item-checkmark">Visit to Alappuzha Beach, Periyar Lake, Eravikulam national park</li>
+                        <li class="list-item-checkmark">Visit to Tata Tea Museum, Valara Waterfalls, Mattupetty Dam</li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center text-sm">
+                        <div class="text-right w-full">
+                            <p class="text-xl font-bold text-gray-800">₹13,290<span class="text-sm font-normal text-gray-500">/Person</span></p>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button class="w-full bg-blue-500 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105 book-now-btn">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Yatra.com - Beautiful Munnar & Thekkady -->
+            <div class="bg-white rounded-3xl shadow-lg overflow-hidden flex-shrink-0 w-80 sm:w-96 snap-center">
+                <div class="relative">
+                    <img class="w-full h-auto object-cover rounded-t-3xl" src="https://placehold.co/600x400/fde047/ffffff?text=Munnar+%26+Thekkady" alt="Munnar & Thekkady">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-xl md:text-2xl font-bold text-gray-800 leading-tight">Beautiful Munnar & Thekkady</h2>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">3N</span>
+                    </div>
+                    
+                    <div class="mt-6 grid grid-cols-2 gap-4 text-sm text-gray-700">
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M3 5a2 2 0 114 0v2H4a2 2 0 01-2-2zM4 11a2 2 0 114 0v2H4a2 2 0 01-2-2zM12 5a2 2 0 100-4 2 2 0 000 4zM12 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                Round Trip Flights
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                3 Star Hotels & Houseboat
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm1 2v8h10V6H5zm3 3a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                                6 Activities
+                            </li>
+                        </ul>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Intercity Car Transfers
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Airport Transfers
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Selected Meals
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="mt-6 space-y-2 text-sm text-gray-700">
+                        <li class="list-item-checkmark">Sightseeing as per itinerary</li>
+                         <li class="list-item-checkmark">Visit to Alappuzha Beach, Periyar Lake, Eravikulam national park</li>
+                        <li class="list-item-checkmark">Visit to Tata Tea Museum, Valara Waterfalls, Mattupetty Dam</li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center text-sm">
+                        <div class="text-right w-full">
+                            <p class="text-xl font-bold text-gray-800">₹11,690<span class="text-sm font-normal text-gray-500">/Person</span></p>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button class="w-full bg-blue-500 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105 book-now-btn">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl shadow-lg overflow-hidden flex-shrink-0 w-80 sm:w-96 snap-center">
+                <div class="relative">
+                    <img class="w-full h-auto object-cover rounded-t-3xl" src="https://placehold.co/600x400/fde047/ffffff?text=Munnar+%26+Thekkady" alt="Munnar & Thekkady">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-xl md:text-2xl font-bold text-gray-800 leading-tight">Beautiful Munnar & Thekkady</h2>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">3N</span>
+                    </div>
+                    
+                    <div class="mt-6 grid grid-cols-2 gap-4 text-sm text-gray-700">
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M3 5a2 2 0 114 0v2H4a2 2 0 01-2-2zM4 11a2 2 0 114 0v2H4a2 2 0 01-2-2zM12 5a2 2 0 100-4 2 2 0 000 4zM12 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                Round Trip Flights
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                3 Star Hotels & Houseboat
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm1 2v8h10V6H5zm3 3a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                                6 Activities
+                            </li>
+                        </ul>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Intercity Car Transfers
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Airport Transfers
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Selected Meals
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="mt-6 space-y-2 text-sm text-gray-700">
+                        <li class="list-item-checkmark">Sightseeing as per itinerary</li>
+                         <li class="list-item-checkmark">Visit to Alappuzha Beach, Periyar Lake, Eravikulam national park</li>
+                        <li class="list-item-checkmark">Visit to Tata Tea Museum, Valara Waterfalls, Mattupetty Dam</li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center text-sm">
+                        <div class="text-right w-full">
+                            <p class="text-xl font-bold text-gray-800">₹11,690<span class="text-sm font-normal text-gray-500">/Person</span></p>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button class="w-full bg-blue-500 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105 book-now-btn">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl shadow-lg overflow-hidden flex-shrink-0 w-80 sm:w-96 snap-center">
+                <div class="relative">
+                    <img class="w-full h-auto object-cover rounded-t-3xl" src="https://placehold.co/600x400/fde047/ffffff?text=Munnar+%26+Thekkady" alt="Munnar & Thekkady">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-xl md:text-2xl font-bold text-gray-800 leading-tight">Beautiful Munnar & Thekkady</h2>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">3N</span>
+                    </div>
+                    
+                    <div class="mt-6 grid grid-cols-2 gap-4 text-sm text-gray-700">
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M3 5a2 2 0 114 0v2H4a2 2 0 01-2-2zM4 11a2 2 0 114 0v2H4a2 2 0 01-2-2zM12 5a2 2 0 100-4 2 2 0 000 4zM12 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                Round Trip Flights
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                3 Star Hotels & Houseboat
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm1 2v8h10V6H5zm3 3a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                                6 Activities
+                            </li>
+                        </ul>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Intercity Car Transfers
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Airport Transfers
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Selected Meals
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="mt-6 space-y-2 text-sm text-gray-700">
+                        <li class="list-item-checkmark">Sightseeing as per itinerary</li>
+                         <li class="list-item-checkmark">Visit to Alappuzha Beach, Periyar Lake, Eravikulam national park</li>
+                        <li class="list-item-checkmark">Visit to Tata Tea Museum, Valara Waterfalls, Mattupetty Dam</li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center text-sm">
+                        <div class="text-right w-full">
+                            <p class="text-xl font-bold text-gray-800">₹11,690<span class="text-sm font-normal text-gray-500">/Person</span></p>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button class="w-full bg-blue-500 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105 book-now-btn">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl shadow-lg overflow-hidden flex-shrink-0 w-80 sm:w-96 snap-center">
+                <div class="relative">
+                    <img class="w-full h-auto object-cover rounded-t-3xl" src="https://placehold.co/600x400/fde047/ffffff?text=Munnar+%26+Thekkady" alt="Munnar & Thekkady">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-xl md:text-2xl font-bold text-gray-800 leading-tight">Beautiful Munnar & Thekkady</h2>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">3N</span>
+                    </div>
+                    
+                    <div class="mt-6 grid grid-cols-2 gap-4 text-sm text-gray-700">
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M3 5a2 2 0 114 0v2H4a2 2 0 01-2-2zM4 11a2 2 0 114 0v2H4a2 2 0 01-2-2zM12 5a2 2 0 100-4 2 2 0 000 4zM12 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                Round Trip Flights
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                3 Star Hotels & Houseboat
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm1 2v8h10V6H5zm3 3a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                                6 Activities
+                            </li>
+                        </ul>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Intercity Car Transfers
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Airport Transfers
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Selected Meals
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="mt-6 space-y-2 text-sm text-gray-700">
+                        <li class="list-item-checkmark">Sightseeing as per itinerary</li>
+                         <li class="list-item-checkmark">Visit to Alappuzha Beach, Periyar Lake, Eravikulam national park</li>
+                        <li class="list-item-checkmark">Visit to Tata Tea Museum, Valara Waterfalls, Mattupetty Dam</li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center text-sm">
+                        <div class="text-right w-full">
+                            <p class="text-xl font-bold text-gray-800">₹11,690<span class="text-sm font-normal text-gray-500">/Person</span></p>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button class="w-full bg-blue-500 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105 book-now-btn">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl shadow-lg overflow-hidden flex-shrink-0 w-80 sm:w-96 snap-center">
+                <div class="relative">
+                    <img class="w-full h-auto object-cover rounded-t-3xl" src="https://placehold.co/600x400/fde047/ffffff?text=Munnar+%26+Thekkady" alt="Munnar & Thekkady">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-xl md:text-2xl font-bold text-gray-800 leading-tight">Beautiful Munnar & Thekkady</h2>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">3N</span>
+                    </div>
+                    
+                    <div class="mt-6 grid grid-cols-2 gap-4 text-sm text-gray-700">
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M3 5a2 2 0 114 0v2H4a2 2 0 01-2-2zM4 11a2 2 0 114 0v2H4a2 2 0 01-2-2zM12 5a2 2 0 100-4 2 2 0 000 4zM12 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                Round Trip Flights
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                3 Star Hotels & Houseboat
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm1 2v8h10V6H5zm3 3a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                                6 Activities
+                            </li>
+                        </ul>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Intercity Car Transfers
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Airport Transfers
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v5a1 1 0 11-2 0v-5zm1-3a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                                Selected Meals
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="mt-6 space-y-2 text-sm text-gray-700">
+                        <li class="list-item-checkmark">Sightseeing as per itinerary</li>
+                         <li class="list-item-checkmark">Visit to Alappuzha Beach, Periyar Lake, Eravikulam national park</li>
+                        <li class="list-item-checkmark">Visit to Tata Tea Museum, Valara Waterfalls, Mattupetty Dam</li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center text-sm">
+                        <div class="text-right w-full">
+                            <p class="text-xl font-bold text-gray-800">₹11,690<span class="text-sm font-normal text-gray-500">/Person</span></p>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button class="w-full bg-blue-500 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105 book-now-btn">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Message Box -->
+    <div id="message-box" class="message-box hidden">
+        <p class="text-lg font-semibold mb-4">This is a simulated message box.</p>
+        <p>The booking feature is a demonstration.</p>
+        <button onclick="closeMessageBox()" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">Close</button>
+    </div>
+
+    <script>
+        // JavaScript to show the message box on click
+        document.addEventListener('DOMContentLoaded', () => {
+            const bookingButtons = document.querySelectorAll('.book-now-btn');
+            const messageBox = document.getElementById('message-box');
+
+            // Add an event listener to each button
+            bookingButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    messageBox.style.display = 'block';
+                });
+            });
+        });
+        
+        function closeMessageBox() {
+            const messageBox = document.getElementById('message-box');
+            messageBox.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

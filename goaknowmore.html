@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonderlight Adventure: Beaches, Forts, and Falls</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        .header-bg {
+            background-image: url('https://placehold.co/1200x600/00796B/ffffff?text=Goa+Coastal+View');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        .text-goa-accent {
+            color: #FF5722; /* Deep Orange/Goa Sunset */
+        }
+        .bg-goa-primary {
+            background-color: #00796B; /* Dark Teal/Coastal Green */
+        }
+        .btn-goa-accent {
+            background-color: #FF5722;
+            transition: background-color 0.3s;
+        }
+        .btn-goa-accent:hover {
+            background-color: #E64A19;
+        }
+        .card-bg-light {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="header-bg relative h-[50vh] flex items-center justify-center">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="relative text-center p-8">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4" style="font-family: 'Playfair Display', serif;">
+                Wonderlight Adventure
+            </h1>
+            <p class="text-xl text-white font-light max-w-2xl mx-auto">
+                Where sun-kissed beaches meet rich history and vibrant culture.
+            </p>
+            <a href="#places" class="mt-8 inline-flex items-center btn-goa-accent text-white font-medium py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300">
+                Explore Top Destinations
+                <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16">
+
+        <!-- Introduction Section -->
+        <section class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-goa-accent mb-4">A Land of Contrast and Charm</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                Goa is divided into North and South, each offering a distinct flavor of this coastal paradise. Whether you seek bustling nightlife or tranquil solitude, Goa has a corner just for you.
+            </p>
+        </section>
+
+        <!-- Places to Visit Section -->
+        <section id="places" class="mb-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-10 text-center" style="font-family: 'Playfair Display', serif;">
+                Must-Visit Tourist Spots
+            </h2>
+            
+            <!-- Category 1: Beaches & Coastal Fun -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold bg-goa-primary text-white p-4 rounded-t-lg flex items-center">
+                    <i data-lucide="waves" class="w-6 h-6 mr-3"></i>
+                    Sun-Kissed Beaches
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-6 bg-white rounded-b-lg card-shadow">
+                    <!-- Beach Card 1: Baga Beach -->
+                    <div class="card-bg-light rounded-lg overflow-hidden border border-gray-100 transition duration-300 hover:shadow-lg">
+                        <img class="w-full h-48 object-cover" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/a7/1a/90/goa-quick-guide-largejpg.jpg?w=1400&h=1400&s=1" alt="Baga Beach, North Goa">
+                        <div class="p-4">
+                            <h4 class="font-bold text-xl mb-2 text-gray-800">Baga Beach (North Goa)</h4>
+                            <p class="text-sm text-gray-600">The heart of Goa's nightlife and commercial activity. Perfect for water sports, beach shacks, and vibrant parties. Great for groups and adventure lovers.</p>
+                            <span class="text-xs font-semibold text-goa-accent mt-2 block">Vibrant & Lively</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Beach Card 2: Palolem Beach -->
+                    <div class="card-bg-light rounded-lg overflow-hidden border border-gray-100 transition duration-300 hover:shadow-lg">
+                        <img class="w-full h-48 object-cover" src="https://travelentice.com/wp-content/uploads/photo-gallery/imported_from_media_libray/Palolem-Beach-in-Goa-3.jpg?bwg=1638782582" alt="Palolem Beach, South Goa">
+                        <div class="p-4">
+                            <h4 class="font-bold text-xl mb-2 text-gray-800">Palolem Beach (South Goa)</h4>
+                            <p class="text-sm text-gray-600">A crescent-shaped paradise with calm waters, ideal for kayaking and dolphin spotting. Known for its laid-back, tranquil vibe and 'Silent Discos'. Excellent for families and couples.</p>
+                            <span class="text-xs font-semibold text-goa-accent mt-2 block">Secluded & Serene</span>
+                        </div>
+                    </div>
+
+                    <!-- Beach Card 3: Anjuna Beach -->
+                    <div class="card-bg-light rounded-lg overflow-hidden border border-gray-100 transition duration-300 hover:shadow-lg">
+                        <img class="w-full h-48 object-cover" src="https://www.anjoned.com/blog/wp-content/uploads/2022/12/Top-Things-to-Do-Near-Anjuna-Beach-North-Goa.webp" alt="Anjuna Beach, North Goa">
+                        <div class="p-4">
+                            <h4 class="font-bold text-xl mb-2 text-gray-800">Anjuna Beach (North Goa)</h4>
+                            <p class="text-sm text-gray-600">Famous for its dramatic rocky shoreline and the legendary Wednesday Flea Market, offering unique souvenirs, jewelry, and clothing.</p>
+                            <span class="text-xs font-semibold text-goa-accent mt-2 block">Bohemian & Market</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: Forts & Historical Heritage -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold bg-goa-primary text-white p-4 rounded-t-lg flex items-center">
+                    <i data-lucide="castle" class="w-6 h-6 mr-3"></i>
+                    Historic Forts and Churches
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-6 bg-white rounded-b-lg card-shadow">
+                    <!-- Heritage Card 1: Basilica of Bom Jesus -->
+                    <div class="card-bg-light rounded-lg overflow-hidden border border-gray-100 transition duration-300 hover:shadow-lg">
+                        <img class="w-full h-48 object-cover" src="https://www.tourmyindia.com/states/goa/image/basilica-of-bom-jesus-goa.webp" alt="Basilica of Bom Jesus">
+                        <div class="p-4">
+                            <h4 class="font-bold text-xl mb-2 text-gray-800">Basilica of Bom Jesus</h4>
+                            <p class="text-sm text-gray-600">A UNESCO World Heritage Site in Old Goa, famous for its magnificent Baroque architecture and for holding the mortal remains of St. Francis Xavier.</p>
+                            <span class="text-xs font-semibold text-goa-accent mt-2 block">UNESCO Site, Old Goa</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Heritage Card 2: Fort Aguada -->
+                    <div class="card-bg-light rounded-lg overflow-hidden border border-gray-100 transition duration-300 hover:shadow-lg">
+                        <img class="w-full h-48 object-cover" src="https://d26dp53kz39178.cloudfront.net/media/uploads/Travel_Guide_Images/North-Goa_result.webp" alt="Fort Aguada, Goa">
+                        <div class="p-4">
+                            <h4 class="font-bold text-xl mb-2 text-gray-800">Fort Aguada</h4>
+                            <p class="text-sm text-gray-600">A massive 17th-century Portuguese fort and lighthouse overlooking Sinquerim Beach. Offers panoramic views of the Arabian Sea and Mandovi River.</p>
+                            <span class="text-xs font-semibold text-goa-accent mt-2 block">Panoramic Views, Candolim</span>
+                        </div>
+                    </div>
+
+                    <!-- Heritage Card 3: Chapora Fort -->
+                    <div class="card-bg-light rounded-lg overflow-hidden border border-gray-100 transition duration-300 hover:shadow-lg">
+                        <img class="w-full h-48 object-cover" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/98/0c/33/dsc-0023-02-largejpg.jpg?w=1000&h=-1&s=1" alt="Chapora Fort, Goa">
+                        <div class="p-4">
+                            <h4 class="font-bold text-xl mb-2 text-gray-800">Chapora Fort</h4>
+                            <p class="text-sm text-gray-600">Known as the 'Dil Chahta Hai' fort, it offers stunning sunset vistas over Vagator and Chapora beaches. A must-visit for photographers and film buffs.</p>
+                            <span class="text-xs font-semibold text-goa-accent mt-2 block">Sunset Point, Vagator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Natural Wonders & Wildlife -->
+            <div>
+                <h3 class="text-2xl font-semibold bg-goa-primary text-white p-4 rounded-t-lg flex items-center">
+                    <i data-lucide="mountain" class="w-6 h-6 mr-3"></i>
+                    Natural Wonders
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-6 bg-white rounded-b-lg card-shadow">
+                    <!-- Nature Card 1: Dudhsagar Falls -->
+                    <div class="card-bg-light rounded-lg overflow-hidden border border-gray-100 transition duration-300 hover:shadow-lg">
+                        <img class="w-full h-48 object-cover" src="https://imgmediagumlet.lbb.in/media/2021/10/6165b8de6a9fc04e3f38c58c_1634056414914.jpg" alt="Dudhsagar Waterfalls">
+                        <div class="p-4">
+                            <h4 class="font-bold text-xl mb-2 text-gray-800">Dudhsagar Waterfalls</h4>
+                            <p class="text-sm text-gray-600">One of India's tallest waterfalls, its name translates to "Sea of Milk" due to the milky-white froth of the falling water. Accessible by jeep safari.</p>
+                            <span class="text-xs font-semibold text-goa-accent mt-2 block">Trekking & Safari</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Nature Card 2: Grand Island -->
+                    <div class="card-bg-light rounded-lg overflow-hidden border border-gray-100 transition duration-300 hover:shadow-lg">
+                        <img class="w-full h-48 object-cover" src="https://soulbrasil.com/wp-content/uploads/2009/01/aventureiro-e1698106826617.jpg" alt="Grand Island, Goa">
+                        <div class="p-4">
+                            <h4 class="font-bold text-xl mb-2 text-gray-800">Grand Island (Ilha Grande)</h4>
+                            <p class="text-sm text-gray-600">A hub for watersports, especially snorkeling and scuba diving. A popular day trip for discovering shipwrecks and vibrant marine life.</p>
+                            <span class="text-xs font-semibold text-goa-accent mt-2 block">Scuba & Snorkeling</span>
+                        </div>
+                    </div>
+
+                    <!-- Nature Card 3: Dr. Salim Ali Bird Sanctuary -->
+                    <div class="card-bg-light rounded-lg overflow-hidden border border-gray-100 transition duration-300 hover:shadow-lg">
+                        <img class="w-full h-48 object-cover" src="https://s7ap1.scene7.com/is/image/incredibleindia/dr-salim-ali-bird-sanctuary-goa-goa-1-attr-hero?qlt=82&ts=1742160241518" alt="Dr. Salim Ali Bird Sanctuary">
+                        <div class="p-4">
+                            <h4 class="font-bold text-xl mb-2 text-gray-800">Dr. Salim Ali Bird Sanctuary</h4>
+                            <p class="text-sm text-gray-600">A mangrove habitat on Chorao Island, accessible by ferry. A haven for various species of migratory and local birds, perfect for nature photography.</p>
+                            <span class="text-xs font-semibold text-goa-accent mt-2 block">Bird Watching & Nature</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action / Trip Planning -->
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">Wonderlight Adventure | Land of Sun, Sand, and Sea</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+            </div>
+            <p class="text-sm text-gray-500 mt-4">&copy; 2025 WonserlightAdventureGoa Explorer Guide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Modal/Message Box (Replaces alert()) -->
+    <div id="custom-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50">
+        <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full transform transition-all scale-100 opacity-100">
+            <h4 id="modal-title" class="text-xl font-bold mb-3 text-goa-accent"></h4>
+            <p id="modal-message" class="text-gray-700 mb-6"></p>
+            <button onclick="hideModal()" class="btn-goa-accent text-white font-medium py-2 px-4 rounded-full float-right">
+                Close
+            </button>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Icon Rendering and Modal -->
+    <script>
+        // Lucide Icons rendering
+        lucide.createIcons();
+
+        // Custom Modal Logic
+        function showMessage(title, message) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-message').textContent = message;
+            document.getElementById('custom-modal').classList.remove('hidden');
+            document.getElementById('custom-modal').classList.add('flex');
+        }
+
+        function hideModal() {
+            document.getElementById('custom-modal').classList.add('hidden');
+            document.getElementById('custom-modal').classList.remove('flex');
+        }
+
+        // Basic Scroll to Anchor for smooth navigation
+        document.querySelector('a[href="#places"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('places').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

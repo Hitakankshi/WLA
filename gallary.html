@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Explorer | Travel Gallery</title>
+    <link rel="stylesheet" href="/css/gallary.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="sticky-header">
+        <nav class="navbar">
+            <div class="nav-left">
+                <button class="menu-btn" id="menuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo-container">
+                    <img src="/image/WonderlightAdventureLogo.jpg" alt="Wonderlight Adventure Logo" class="logo-img">
+                    <span class="logo-text">Wonderlight Adventure</span>
+                </div>
+            </div>
+            
+            <div class="nav-right" id="navRight">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/html/home.html">Home</a></li>
+                    <li><a href="/html/aboutus.html">About Us</a></li>
+                    <li><a href="/html/package.html">Package</a></li>
+                    <li><a href="/html/gallary.html" class="active" style="color: black; font-weight: bold; font-size: 18px;">Gallery</a></li>
+                    <li><a href="/html/contactus.html">Contact Us</a></li>
+                    <li><a href="/html/login.html" class="login-btn">Login</a></li>
+                </ul>
+                <div class="search-container" id="searchContainer">
+                    <input type="text" placeholder="Search adventure..." id="searchInput">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <header class="head">
+        <h1>World Explorer Travel Agency</h1>
+        <p>Discover breathtaking destinations and create unforgettable memories with our curated travel experiences</p>
+    </header>
+    
+    <div id="home" class="container">
+        <div class="tab-buttons">
+            <button class="tab-btn active" onclick="openTab('tropical', event)">Tropical Paradise</button>
+            <button class="tab-btn" onclick="openTab('european', event)">European Charm</button>
+            <button class="tab-btn" onclick="openTab('adventure', event)">Adventure Escapes</button>
+        </div>
+        
+        <!-- Tropical Paradise Tab -->
+        <div id="tropical" class="tab-content active">
+            <div class="section-title">
+                <h2>Tropical Paradise</h2>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-slider" id="tropical-slider">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="White sand beach with palm trees">
+                        <div class="destination-info">
+                            <h3>Maldives</h3>
+                            <p>Crystal clear waters and luxury resorts</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Luxury overwater bungalows">
+                        <div class="destination-info">
+                            <h3>Bora Bora</h3>
+                            <p>Iconic overwater bungalows</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Vibrant sunset over ocean">
+                        <div class="destination-info">
+                            <h3>Bali</h3>
+                            <p>Spiritual retreats and stunning sunsets</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Tropical waterfall">
+                        <div class="destination-info">
+                            <h3>Fiji</h3>
+                            <p>Lush jungles and pristine beaches</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Tropical island">
+                        <div class="destination-info">
+                            <h3>Seychelles</h3>
+                            <p>Granite boulders and turquoise waters</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Tropical beach">
+                        <div class="destination-info">
+                            <h3>Phuket</h3>
+                            <p>Vibrant culture and island hopping</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-nav">
+                    <div class="gallery-arrow gallery-arrow-left" onclick="scrollGallery('tropical', -1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/>
+                        </svg>
+                    </div>
+                    <div class="gallery-arrow gallery-arrow-right" onclick="scrollGallery('tropical', 1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- European Charm Tab -->
+        <div id="european" class="tab-content">
+            <div class="section-title">
+                <h2>European Charm</h2>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-slider" id="european-slider">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Eiffel Tower at golden hour">
+                        <div class="destination-info">
+                            <h3>Paris</h3>
+                            <p>The city of love and lights</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1498307833015-e7b400441eb8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Colorful houses on Italian coastline">
+                        <div class="destination-info">
+                            <h3>Cinque Terre</h3>
+                            <p>Colorful villages on the Italian Riviera</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Snow-capped Swiss Alps">
+                        <div class="destination-info">
+                            <h3>Swiss Alps</h3>
+                            <p>Majestic mountains and alpine villages</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Amsterdam canals">
+                        <div class="destination-info">
+                            <h3>Amsterdam</h3>
+                            <p>Canals and historic architecture</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Santorini sunset">
+                        <div class="destination-info">
+                            <h3>Santorini</h3>
+                            <p>Whitewashed buildings and blue domes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Prague castle">
+                        <div class="destination-info">
+                            <h3>Prague</h3>
+                            <p>Gothic architecture and historic charm</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-nav">
+                    <div class="gallery-arrow gallery-arrow-left" onclick="scrollGallery('european', -1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/>
+                        </svg>
+                    </div>
+                    <div class="gallery-arrow gallery-arrow-right" onclick="scrollGallery('european', 1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Adventure Escapes Tab -->
+        <div id="adventure" class="tab-content">
+            <div class="section-title">
+                <h2>Adventure Escapes</h2>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-slider" id="adventure-slider">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Lion on African safari">
+                        <div class="destination-info">
+                            <h3>Serengeti</h3>
+                            <p>Witness the great migration</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1526397751294-331021109fbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ancient ruins at Machu Picchu">
+                        <div class="destination-info">
+                            <h3>Machu Picchu</h3>
+                            <p>Ancient Inca city in the clouds</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Hiking in New Zealand mountains">
+                        <div class="destination-info">
+                            <h3>New Zealand</h3>
+                            <p>Middle-earth adventures await</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Grand Canyon">
+                        <div class="destination-info">
+                            <h3>Grand Canyon</h3>
+                            <p>Breathtaking vistas and hiking trails</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1580251645803-6e75c0f6c0a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Patagonia mountains">
+                        <div class="destination-info">
+                            <h3>Patagonia</h3>
+                            <p>Rugged landscapes and glaciers</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Amazon rainforest">
+                        <div class="destination-info">
+                            <h3>Amazon</h3>
+                            <p>Lush rainforest and wildlife</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-nav">
+                    <div class="gallery-arrow gallery-arrow-left" onclick="scrollGallery('adventure', -1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/>
+                        </svg>
+                    </div>
+                    <div class="gallery-arrow gallery-arrow-right" onclick="scrollGallery('adventure', 1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonials-header">
+                <h2 class="testimonials-title">Traveler Experiences</h2>
+                <div class="view-all">
+                    View All Stories
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="testimonial-slider" id="testimonial-slider">
+                <div class="testimonial-card">
+                    <h3 class="traveler-name">Sarah Johnson</h3>
+                    <p class="travel-location">Maldives Vacation</p>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">"The most breathtaking experiences of my life! World Explorer planned every detail perfectly, allowing us to just enjoy our dream vacation."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <h3 class="traveler-name">Michael Thompson</h3>
+                    <p class="travel-location">European Tour</p>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">"Flawless planning from start to finish. Their local guides were knowledgeable and helped us discover hidden gems we would have missed otherwise."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <h3 class="traveler-name">The Rodriguez Family</h3>
+                    <p class="travel-location">Adventure Package</p>
+                    <div class="rating">★★★★☆</div>
+                    <p class="testimonial-text">"Already booking our next trip with them! The family package was perfect - activities for the kids and relaxation for us parents."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <h3 class="traveler-name">Emma Wilson</h3>
+                    <p class="travel-location">Honeymoon in Bali</p>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">"The romantic sunset dinners arranged by World Explorer were magical moments we'll cherish forever."</p>
+                </div>
+            </div>
+            
+            <div class="slider-nav">
+                <div class="arrow arrow-left" id="prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/>
+                    </svg>
+                </div>
+                <div class="arrow arrow-right" id="next">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="offers-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Special Offers</h2>
+            </div>
+            
+            <div class="offer-cards">
+                <div class="offer-card">
+                    <h3>Early Bird Special</h3>
+                    <p>Book your dream vacation <span class="highlight">6 months in advance</span> and receive <span class="highlight">15% off</span> your total package.</p>
+                </div>
+                
+                <div class="offer-card">
+                    <h3>Honeymoon Package</h3>
+                    <p>Celebrate your love with a <span class="highlight">complimentary room upgrade</span>, champagne upon arrival, and a romantic sunset dinner.</p>
+                </div>
+                
+                <div class="offer-card">
+                    <h3>Family Discount</h3>
+                    <p><span class="highlight">Kids under 12 stay free</span> at participating resorts. Family-friendly activities included.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready for Your Next Adventure?</h2>
+            <p>Our travel experts are standing by to help you plan the perfect getaway tailored to your dreams and budget.</p>
+            <button class="cta-button">Start Your Journey Today</button>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 World Explorer Travel Agency. All rights reserved.</p>
+            <p>Contact us: info@worldexplorer.com | +1 (800) 555-EXPLORE</p>
+        </div>
+    </footer>
+
+    <script src="/java script/gallary.js"></script>
+</body>
+</html>

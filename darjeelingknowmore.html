@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wonderlightadventure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3f1;
+        }
+        .bg-darjeeling {
+            background-image: url('https://placehold.co/1920x1080/4f5b5f/e0e0e0?text=Darjeeling+Himalayas');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-bg-gradient {
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+        }
+    </style>
+</head>
+<body class="bg-[#f0e7e3] text-gray-800">
+
+    <!-- Header Section -->
+    <header class="relative bg-darjeeling h-96 flex items-center justify-center text-white p-4">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="z-10 text-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 drop-shadow-lg">
+                Discover Darjeeling
+            </h1>
+            <p class="text-xl sm:text-2xl md:text-3xl font-light drop-shadow-md">
+                The Queen of the Hills
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container mx-auto px-4 py-12">
+        <section class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-[#8a5b4c]">A Glimpse into the Majestic Hill Station</h2>
+            <p class="max-w-3xl mx-auto text-lg text-gray-700">
+                Nestled in the foothills of the Himalayas, Darjeeling is a mesmerizing blend of breathtaking landscapes, lush tea plantations, and vibrant culture. From stunning sunrises to charming toy train rides, it's a paradise for nature lovers and adventurers alike.
+            </p>
+        </section>
+
+        <!-- Tourist Places Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Tiger Hill Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
+                <div class="relative w-full h-64">
+                    <img src="https://placehold.co/600x400/94a3b8/ffffff?text=Tiger+Hill" alt="Sunrise at Tiger Hill" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 card-bg-gradient"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2">
+                        <h3 class="text-2xl font-bold mb-1">Tiger Hill</h3>
+                        <p class="text-sm">Witness the magical sunrise over Kanchenjunga.</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed">
+                        Tiger Hill is world-renowned for its panoramic views of the sunrise, painting the snow-capped peaks of Mount Kanchenjunga in a spectacular array of colors. On a clear day, you can even spot Mount Everest in the distance. A visit here is an early morning ritual for every tourist.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Darjeeling Himalayan Railway (Toy Train) Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
+                <div class="relative w-full h-64">
+                    <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=Toy+Train" alt="Darjeeling Toy Train" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 card-bg-gradient"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2">
+                        <h3 class="text-2xl font-bold mb-1">Darjeeling Toy Train</h3>
+                        <p class="text-sm">A UNESCO World Heritage Site since 1999.</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed">
+                        A nostalgic ride on this narrow-gauge railway is a must. The Toy Train chugs its way through misty valleys, lush tea gardens, and charming villages, offering an unforgettable journey through the heart of Darjeeling's stunning landscape.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Batasia Loop Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
+                <div class="relative w-full h-64">
+                    <img src="https://placehold.co/600x400/4f5b5f/e0e0e0?text=Batasia+Loop" alt="Batasia Loop" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 card-bg-gradient"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2">
+                        <h3 class="text-2xl font-bold mb-1">Batasia Loop</h3>
+                        <p class="text-sm">A spiral railway marvel with a war memorial.</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed">
+                        This is an engineering masterpiece where the Toy Train takes a 360-degree loop to navigate a steep descent. Located amidst a beautifully manicured garden with a war memorial, it offers a perfect vantage point for a stunning view of Darjeeling town and the surrounding mountains.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Peace Pagoda Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
+                <div class="relative w-full h-64">
+                    <img src="https://placehold.co/600x400/a3e635/ffffff?text=Peace+Pagoda" alt="Japanese Peace Pagoda" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 card-bg-gradient"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2">
+                        <h3 class="text-2xl font-bold mb-1">Peace Pagoda</h3>
+                        <p class="text-sm">A symbol of peace and harmony.</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed">
+                        Built by a Japanese Buddhist order, this beautiful white stupa is a serene sanctuary dedicated to world peace. The site also provides a spectacular panoramic view of the town and the snow-capped Himalayan peaks, making it a place of tranquility and reflection.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Happy Valley Tea Estate Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
+                <div class="relative w-full h-64">
+                    <img src="https://placehold.co/600x400/6b7280/ffffff?text=Tea+Estate" alt="Happy Valley Tea Estate" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 card-bg-gradient"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2">
+                        <h3 class="text-2xl font-bold mb-1">Happy Valley Tea Estate</h3>
+                        <p class="text-sm">Explore one of the oldest tea estates.</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed">
+                        A visit to Darjeeling is incomplete without experiencing its famous tea culture. Happy Valley Tea Estate, one of the oldest in the region, offers guided tours where you can learn about the tea-making process, from plucking to processing, and even enjoy a fresh cup of world-famous Darjeeling tea.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Padmaja Naidu Himalayan Zoological Park Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300">
+                <div class="relative w-full h-64">
+                    <img src="https://placehold.co/600x400/10b981/ffffff?text=Darjeeling+Zoo" alt="Darjeeling Zoo" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 card-bg-gradient"></div>
+                    <div class="absolute bottom-4 left-4 text-white p-2">
+                        <h3 class="text-2xl font-bold mb-1">Zoological Park</h3>
+                        <p class="text-sm">Home to endangered Himalayan species.</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed">
+                        This high-altitude zoo is a haven for wildlife lovers, home to rare and endangered species like the Red Panda, Snow Leopard, and Tibetan Wolf. It's a key center for conservation and breeding programs, offering an educational and memorable experience for visitors of all ages.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Travel Tips Section -->
+        <section class="mt-16 bg-white rounded-xl shadow-lg p-8 md:p-12">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center text-[#8a5b4c]">Travel Tips for Your Trip</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Best Time to Visit</h3>
+                    <p class="text-gray-700 text-sm md:text-base">
+                        The ideal time to visit is from April to June for pleasant weather, or from September to November for clear views of the mountains. Avoid the monsoon season (July-August) due to heavy rainfall.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">What to Wear</h3>
+                    <p class="text-gray-700 text-sm md:text-base">
+                        Pack warm clothes, including jackets, sweaters, and a scarf, as the weather can be chilly, especially during early mornings and evenings. Comfortable walking shoes are a must for exploring the town.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Local Cuisine</h3>
+                    <p class="text-gray-700 text-sm md:text-base">
+                        Don't leave without trying the local delicacies! Momos (steamed dumplings), Thukpa (noodle soup), and the famous Darjeeling tea are a treat for your taste buds.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#8a5b4c] text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 WonderlightAdventure. All Rights Reserved.</p>
+            
+        </div>
+    </footer>
+
+</body>
+</html>

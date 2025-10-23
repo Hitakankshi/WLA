@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WonderlightAdventure | Madhya Pradesh: The Heart of India</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and a custom color palette -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mp-primary': '#FF8C00', // Deep Orange/Saffron
+                        'mp-secondary': '#1E3A8A', // Deep Blue
+                        'mp-bg': '#FFFBEB', // Light Cream/Yellowish Background
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for the travel cards and background */
+        .card-shadow {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card-shadow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-mp-bg font-sans text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-mp-secondary text-white py-12 shadow-lg">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight">
+                WonderlightAdventure: Explore Madhya Pradesh
+            </h1>
+            <p class="mt-4 text-xl sm:text-2xl font-light text-mp-primary">
+                The Heart of Incredible India
+            </p>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-mp-secondary mb-6">A Land of Wonders</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                Madhya Pradesh (MP) is a treasure trove of historical monuments, majestic wildlife, and serene natural landscapes. From ancient rock shelters and magnificent forts to dense tiger reserves and sacred river banks, MP offers a complete experience for every traveller. Discover the best destinations waiting for you below!
+            </p>
+            <!-- NEW: Email WonderlightAdventure Button -->
+            <a href="mailto:info@wonderlightadventure.com?subject=Inquiry%20about%20Madhya%20Pradesh%20Trip" 
+               class="mt-8 inline-block bg-mp-primary hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                Email WonderlightAdventure to Plan Your Trip
+            </a>
+        </div>
+    </section>
+
+    <!-- Tourist Places Grid Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold text-center text-mp-primary mb-12">Top Tourist Destinations</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Card 1: Khajuraho Group of Monuments (Heritage) -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow">
+                    <!-- Placeholder image with title -->
+                    <img src="https://etimg.etb2bimg.com/photo/88382654.cms" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FF8C00/ffffff?text=KHAJURAHO'" alt="Khajuraho Temples" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="inline-block bg-mp-secondary text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">UNESCO Heritage</span>
+                        <h4 class="text-2xl font-bold text-mp-secondary mb-3">Khajuraho Temples</h4>
+                        <p class="text-gray-600 text-sm">
+                            World-renowned for its group of Hindu and Jain temples built by the Chandela dynasty. Famous for intricate and elaborate carvings, including the iconic erotic sculptures, showcasing medieval Indian artistry.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Kanha National Park (Wildlife) -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow">
+                    <!-- Placeholder image with title -->
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/22/03/a5/kanha-national-park.jpg?w=1200&h=-1&s=1" onerror="this.onerror=null;this.src='https://placehold.co/600x400/4CAF50/ffffff?text=KANHA+NATIONAL+PARK'" alt="Kanha National Park" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="inline-block bg-green-700 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Wildlife Safari</span>
+                        <h4 class="2xl font-bold text-mp-secondary mb-3">Kanha National Park</h4>
+                        <p class="text-gray-600 text-sm">
+                            One of the largest National Parks in Central India and a premier tiger reserve. It is known for its high population of Royal Bengal Tigers and the rare Hard-ground Barasingha.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Card 3: Gwalior Fort (Historical) -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow">
+                    <!-- Placeholder image with title -->
+                    <img src="https://ghummoindia.com/wp-content/uploads/2023/12/gwalior.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/003366/ffffff?text=GWALIOR+FORT'" alt="Gwalior Fort" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="inline-block bg-yellow-600 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Historical Landmark</span>
+                        <h4 class="2xl font-bold text-mp-secondary mb-3">Gwalior Fort</h4>
+                        <p class="text-gray-600 text-sm">
+                            A massive hilltop fortress dubbed the 'Gibraltar of India.' It houses several temples, palaces, and water tanks, reflecting centuries of dynastic rule and architectural evolution.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Sanchi Stupa (Spiritual/Heritage) -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow">
+                    <!-- Placeholder image with title -->
+                    <img src="https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2021/02/22141026/5r4t-12.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/800080/ffffff?text=SANCHI+STUPA'" alt="Sanchi Stupa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="inline-block bg-mp-secondary text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Buddhist Monument</span>
+                        <h4 class="2xl font-bold text-mp-secondary mb-3">Sanchi Stupa</h4>
+                        <p class="text-gray-600 text-sm">
+                            Commissioned by Emperor Ashoka in the 3rd Century BCE, this UNESCO World Heritage Site is the oldest stone structure in India and a masterpiece of Buddhist art and architecture.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Card 5: Pachmarhi (Nature/Hill Station) -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow">
+                    <!-- Placeholder image with title -->
+                    <img src="https://hblimg.mmtcdn.com/content/hubble/img/tvdestinationimages/mmt/activities/m_Pachmarhi_tv_destination_img_1_l_667_1000.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0E7490/ffffff?text=PACHMARHI'" alt="Pachmarhi Hill Station" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="inline-block bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Hill Station</span>
+                        <h4 class="2xl font-bold text-mp-secondary mb-3">Pachmarhi</h4>
+                        <p class="text-gray-600 text-sm">
+                            Known as the 'Queen of Satpura,' Pachmarhi is the only hill station in MP. It is famous for its serene waterfalls (like Bee Falls), caves, and lush green Satpura National Park.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 6: Ujjain (Spiritual) -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow">
+                    <!-- Placeholder image with title -->
+                    <img src="https://media.assettype.com/outlooktraveller%2Fimport%2Fpublic%2Fuploads%2F2017%2F02%2Fujjain8-1024x683.jpg?w=480&auto=format%2Ccompress&fit=max" onerror="this.onerror=null;this.src='https://placehold.co/600x400/A0522D/ffffff?text=UJJAIN'" alt="Mahakaleshwar Temple, Ujjain" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="inline-block bg-red-700 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Pilgrimage Site</span>
+                        <h4 class="2xl font-bold text-mp-secondary mb-3">Ujjain</h4>
+                        <p class="text-gray-600 text-sm">
+                            One of the seven sacred Hindu cities, Ujjain is home to the famous Mahakaleshwar Jyotirlinga, one of the 12 most revered shrines of Lord Shiva. It is also a site for the Kumbh Mela.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 7: Bhedaghat (Natural Wonder) -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow">
+                    <!-- Placeholder image with title -->
+                    <img src="https://media1.thrillophilia.com/filestore/yts84hl9quk29g1o8shxeyt6wyoh_1531911085_Bhedaghat.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/778899/ffffff?text=BHEDAGHAT'" alt="Marble Rocks, Bhedaghat" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="inline-block bg-gray-500 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Natural Wonder</span>
+                        <h4 class="2xl font-bold text-mp-secondary mb-3">Bhedaghat & Marble Rocks</h4>
+                        <p class="text-gray-600 text-sm">
+                            Located near Jabalpur, this spot is famous for the stunning 100-foot-tall marble rocks flanking the Narmada River. Also home to the majestic Dhuandhar Falls (Smoke Cascade).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 8: Orchha (Historical/Scenic) -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow">
+                    <!-- Placeholder image with title -->
+                    <img src="https://hblimg.mmtcdn.com/content/hubble/img/Dest_img/mmt/activities/m_Orchha_destination_image_2025jan_1_l_768_1024.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/8B4513/ffffff?text=ORCHHA'" alt="Orchha Fort Complex" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="inline-block bg-yellow-800 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Riverside Town</span>
+                        <h4 class="2xl font-bold text-mp-secondary mb-3">Orchha</h4>
+                        <p class="text-gray-600 text-sm">
+                            A historical town on the banks of the Betwa River, famous for its magnificent Orchha Fort Complex, Jehangir Mahal, and the unique Ram Raja Temple where Lord Rama is worshipped as a King.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-mp-secondary text-mp-bg py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm">
+                Plan your journey with WonderlightAdventure. A land where history, nature, and spirituality beautifully converge.
+            </p>
+            <div class="mt-4 flex justify-center space-x-4 text-xs">
+                <a href="#" class="hover:text-mp-primary transition-colors duration-200">History</a>
+                <span class="opacity-50">|</span>
+                <a href="#" class="hover:text-mp-primary transition-colors duration-200">Wildlife</a>
+                <span class="opacity-50">|</span>
+                <a href="#" class="hover:text-mp-primary transition-colors duration-200">Pilgrimage</a>
+                <span class="opacity-50">|</span>
+                <!-- NEW: Contact Us Link -->
+                <a href="mailto:contact@wonderlightadventure.com" class="hover:text-mp-primary transition-colors duration-200">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
