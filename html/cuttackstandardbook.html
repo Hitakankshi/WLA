@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuttack Package | 3 Nights, 4 Days</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        /* Custom scrollbar for itinerary box to make it look clean */
+        #itinerary-content {
+            max-height: 400px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #3b82f6 #f1f1f1;
+        }
+        #itinerary-content::-webkit-scrollbar {
+            width: 8px;
+        }
+        #itinerary-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        #itinerary-content::-webkit-scrollbar-thumb {
+            background-color: #3b82f6;
+            border-radius: 4px;
+        }
+        .tab-content {
+            display: none;
+        }
+        .active-tab {
+            border-bottom: 3px solid #f97316;
+            color: #1f2937;
+            font-weight: 600;
+        }
+        /* Floating CTA Bar for mobile */
+        @media (max-width: 767px) {
+            #floating-cta {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 50;
+                box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Mock Data and Gemini API Logic -->
+    <script>
+        const packageData = {
+            title: "Cuttack- Silver City",
+            destination: "Odisha, India",
+            duration: "2 Nights / 3 Days",
+            fromCity: "Cuttack",
+            price: "₹10,000",
+            perText: "per person on twin sharing",
+            travelDate: "14 Nov 2025", 
+            // Updated: Image data for the carousel now contains 6 images
+            carouselImages: [
+                "https://odishatourism.gov.in/content/dam/tourism/home/discover/major-cities/cuttack/see-to-believe/Cuttack-gallery2.jpg",
+                "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwvCcdjR9bo5u7oFle1yGyfM6FtCdIdTPIt_UrsRAYYQg7TC1K3xwgaCmcMEsC2LwVGOdJpgS1pqvIG1gj2iVTqgdbyZekZHS8nOx0TlHO0iGFlQuFhx1qmWYxcLYNu66yQImdX=w675-h390-n-k-no",
+                "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTXlw9focm_2oUP3HNsfO0liMMiMFk7qPKXL4KOYB4DQpLiXVrXyxMpXg849TRon-wEREfKmTUb_jtXS9fomOAOPwo&s=19",
+                "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSykLfTl5_a6wY6Mz0NGuz4sWwnEk--xuJGDdFKL4okBK_uViuJSCAsH_2sd7vQ0pca2fi2OuV0hOqXLgkUQul5wWoEr-30fi7Q95Q12NdH9Uc9oNIPuK-aFAET7zKBvWzYx57rc=w675-h390-n-k-no",
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/511983403.jpg?hp=1&k=4e5b53320ded564d66fce5029dbb383090dad28f7cf51c7fded22914fa00a6df&o=", 
+                "https://r1imghtlak.mmtcdn.com/245ad30c864411eea3760a58a9feac02.jpg"
+            ],
+            itinerary: [
+                { day: 1, title: "Arrival & Heritage Exploration", details: "Morning: Arrival in CuttackArrive at Bhubaneswar Airport or Cuttack Railway Station, where our representative will welcome you and assist with your transfer to the hotel. Check-in, freshen up, and prepare to explore the cultural heart of Odisha.Late Morning: Historic Landmarks & TemplesBegin your journey with a visit to the Barabati Fort, a 14th-century architectural marvel standing as a proud reminder of Cuttack’s glorious past. Continue to the Chandi Temple, one of the city’s most revered shrines dedicated to Goddess Chandi, where spirituality blends beautifully with tradition.Afternoon: Maritime Heritage & City TourAfter lunch, proceed to the Odisha State Maritime Museum, showcasing the region’s rich naval history, ancient trade routes, and shipbuilding traditions. Later, visit the Netaji Birth Place Museum, the ancestral home of freedom fighter Subhas Chandra Bose, filled with rare artifacts and personal memorabilia.Evening: Mahanadi Riverfront & Local CuisineAs the sun sets, head to the scenic Mahanadi River Ghats for a peaceful evening walk. Capture the golden hues of the river and enjoy the gentle breeze as temple bells chime in the distance. End your day savoring local delicacies like Dahibara Aloodum, Chhena Jhili, and Gupchup at popular street food spots.Overnight stay at your hotel in Cuttack." },
+                { day: 2, title: "Spiritual Journey & Cultural Essence", details: "Morning: Dhabaleswar Temple ExcursionAfter breakfast, set out for a half-day excursion to the Dhabaleswar Temple, located on an island in the Mahanadi River. Reach the temple via the picturesque hanging bridge or by boat and experience the serenity of this centuries-old shrine dedicated to Lord Shiva.Afternoon: Silver Filigree & Local Craft TourReturn to the city and explore the famous Tarakasi Market, renowned for its intricate Silver Filigree jewelry — a traditional craft that has earned Cuttack global recognition. Witness artisans at work and shop for handcrafted ornaments, décor pieces, and souvenirs.Have lunch at a local restaurant and taste authentic Odia thali featuring delicacies like Dalma, Pakhala Bhata, and Besara.Evening: Cultural Walk & Night Lights of CuttackIn the evening, enjoy a leisurely drive through the beautifully lit streets of Cuttack, especially if visiting during Durga Puja — when the entire city transforms into a festival of lights and art. Visit Deer Park or the Jobra Barrage area for a quiet riverside retreat.Overnight stay at your hotel in Cuttack." },
+                { day: 3, title: "Departure & Optional Bhubaneswar Tour", details: "Morning: Leisure & CheckoutEnjoy breakfast at your hotel, then take a short stroll through the nearby local markets or visit the Qadam Rasul Mosque, a unique monument that represents the city’s harmonious cultural blend.Afternoon: Return Journey / Optional VisitCheck out and transfer to Cuttack or Bhubaneswar Railway Station / Airport for your onward journey. If time permits, you can extend your trip with an optional visit to Bhubaneswar’s iconic temples — Lingaraj, Mukteswara, and Rajarani — for a perfect spiritual conclusion to your Odisha adventure." },
+            ],
+            inclusions: [
+                { icon: "✈️", text: "Roundtrip Economy Class Flights (New Delhi - Goa - New Delhi)" },
+                { icon: "🏨", text: "2 Nights Accommodation in a Sea-Facing or Premium 3-star Hotel/Resort in Puri (Daily breakfast included)" },
+                { icon: "🚗", text: "Private AC Vehicle for all sightseeing as per the itinerary (Bhubaneswar)" },
+                { icon: "🍽️", text: "Daily Breakfast at the hotel" },
+                { icon: "🎫", text: "Monument Entry Tickets for Konark Sun Temple and other specified sites" },
+                { icon: "🧑‍💻", text: "24/7 Travel Assistance and Local Support" }
+            ],
+            hotels: [
+                { name: "Hotel Akbari Continental", rating: 4.7, location: "central Cuttack (Haripur Road / Mangalabag)", price: "Starting ₹3,000/night"},
+                { name: "Hotel Grand Residency", rating: 4.7, location: "city-central", price: "Starting ₹2,800/night"},
+                { name: "Hotel Seetal", rating: 4.7, location: "Old LIC Colony area", price: "Starting ₹2,500/night"}
+                
+            ]
+        };
+
+        // --- Carousel Logic Start ---
+        let currentSlide = 0;
+        const SLIDE_INTERVAL = 4000; // 4 seconds
+        let slideIntervalId;
+
+        function startAutoScroll() {
+            // Clear any existing interval before setting a new one
+            if (slideIntervalId) clearInterval(slideIntervalId);
+            slideIntervalId = setInterval(nextSlide, SLIDE_INTERVAL);
+        }
+
+        function stopAutoScroll() {
+            if (slideIntervalId) clearInterval(slideIntervalId);
+            slideIntervalId = null;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % packageData.carouselImages.length;
+            updateCarouselUI();
+        }
+
+        // Global function for dot clicks
+        window.goToSlide = function(index) {
+            stopAutoScroll();
+            currentSlide = index;
+            updateCarouselUI();
+            startAutoScroll();
+        }
+
+        // New manual navigation functions for arrows
+        window.manualNextSlide = function() {
+            stopAutoScroll();
+            currentSlide = (currentSlide + 1) % packageData.carouselImages.length;
+            updateCarouselUI();
+            startAutoScroll();
+        }
+
+        window.manualPrevSlide = function() {
+            stopAutoScroll();
+            // The addition of length handles the wrap-around when currentSlide is 0
+            currentSlide = (currentSlide - 1 + packageData.carouselImages.length) % packageData.carouselImages.length;
+            updateCarouselUI();
+            startAutoScroll();
+        }
+
+        function updateCarouselUI() {
+            const carouselElement = document.getElementById('image-carousel');
+            const dotsContainer = document.getElementById('carousel-dots');
+            const photoIndexSpan = document.getElementById('current-photo-index');
+            
+            // Calculate and apply offset for sliding effect
+            const offset = -currentSlide * 100;
+            carouselElement.style.transform = `translateX(${offset}%)`;
+
+            // Update photo index counter
+            if (photoIndexSpan) {
+                photoIndexSpan.textContent = currentSlide + 1;
+            }
+
+            // Update dots
+            dotsContainer.innerHTML = packageData.carouselImages.map((_, index) => 
+                `<button onclick="goToSlide(${index})" class="w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-white w-5' : 'bg-gray-400 opacity-75'}"></button>`
+            ).join('');
+        }
+
+        function initCarousel() {
+            const carouselElement = document.getElementById('image-carousel');
+            // Inject slides HTML
+            carouselElement.innerHTML = packageData.carouselImages.map(url => `
+                <div class="flex-shrink-0 w-full h-full">
+                    <img src="${url}" alt="Goa Scenery" class="w-full h-full object-cover">
+                </div>
+            `).join('');
+            
+            // Initial display update
+            updateCarouselUI();
+
+            // Start automatic scroll
+            startAutoScroll();
+
+            // Add hover listeners to pause auto-scroll (better UX for manual control)
+            const carouselContainer = document.getElementById('carousel-container');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', stopAutoScroll);
+                carouselContainer.addEventListener('mouseleave', startAutoScroll);
+            }
+        }
+        // --- Carousel Logic End ---
+
+
+        // --- Gemini API Integration Start (Corrected Model Version) ---
+
+        const apiKey = ""; // API key is provided at runtime
+        const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+        // Utility function for exponential backoff
+        async function fetchWithRetry(url, options, maxRetries = 5) {
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (response.status === 429 && i < maxRetries - 1) {
+                        // Rate limit, wait with exponential backoff
+                        const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        continue;
+                    }
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response;
+                } catch (error) {
+                    if (i === maxRetries - 1) throw error;
+                }
+            }
+        }
+
+        // Main LLM function to generate a hidden gem suggestion
+        async function generateGeminiSuggestion() {
+            const outputElement = document.getElementById('gemini-suggestion-output');
+            const spinner = document.getElementById('gemini-spinner');
+            const button = document.getElementById('gemini-generate-btn');
+
+            // Construct a summary of the current trip details to guide the AI
+            const itinerarySummary = packageData.itinerary.map(item => `Day ${item.day}: ${item.title}`).join('; ');
+            
+            // Note: Prompt is still tailored for Goa, as this is the Goa file
+            const userQuery = `You are a creative Goa travel expert. The user is on a 4-day trip: ${itinerarySummary}. The main focus is North Goa beaches and some South Goa heritage. Suggest ONE unique, non-touristy 'hidden gem' activity, spot, or restaurant in North Goa that would fit this itinerary. Keep the suggestion description concise (max 3-4 sentences) and highly appealing.`;
+
+            // UI Feedback: Loading
+            button.disabled = true;
+            spinner.classList.remove('hidden');
+            outputElement.style.display = 'block';
+            outputElement.innerHTML = '';
+            outputElement.classList.remove('bg-green-50', 'bg-red-50', 'border-red-300', 'border-green-300');
+            outputElement.classList.add('border', 'border-gray-200');
+            outputElement.textContent = "Thinking of a perfect spot for you...";
+
+
+            try {
+                const payload = {
+                    contents: [{ parts: [{ text: userQuery }] }],
+                    systemInstruction: {
+                        parts: [{ text: "Act as a passionate, local Goan travel advisor." }]
+                    },
+                    generationConfig: {
+                        temperature: 0.8,
+                    }
+                };
+
+                const response = await fetchWithRetry(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                const generatedText = result.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (generatedText) {
+                    outputElement.innerHTML = `<h3 class="font-bold text-lg text-green-700 mb-2">✨ Hidden Gem Suggestion:</h3><p class="text-gray-800">${generatedText}</p>`;
+                    outputElement.classList.remove('border-gray-200');
+                    outputElement.classList.add('bg-green-50', 'border-green-300');
+                } else {
+                    outputElement.textContent = "Sorry, I couldn't generate a suggestion right now. Please try again later.";
+                    outputElement.classList.remove('border-gray-200');
+                    outputElement.classList.add('bg-red-50', 'border-red-300');
+                }
+
+            } catch (error) {
+                outputElement.textContent = "An error occurred while connecting to the travel AI. Please check your connection or try again.";
+                outputElement.classList.remove('border-gray-200');
+                outputElement.classList.add('bg-red-50', 'border-red-300');
+            } finally {
+                spinner.classList.add('hidden');
+                button.disabled = false;
+            }
+        }
+
+        // --- Gemini API Integration End ---
+
+
+        // Function to switch tabs (existing logic)
+        function switchTab(tabId, element) {
+            // Remove active class from all tabs and hide all content
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active-tab', 'text-orange-600');
+                btn.classList.add('text-gray-500');
+            });
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.style.display = 'none';
+            });
+
+            // Add active class to the clicked tab and show relevant content
+            element.classList.add('active-tab', 'text-orange-600');
+            element.classList.remove('text-gray-500');
+            document.getElementById(tabId).style.display = 'block';
+        }
+
+        // Initialize the app on load
+        window.onload = () => {
+            // Set initial package data
+            document.getElementById('package-title').textContent = packageData.title;
+            document.getElementById('package-duration').textContent = packageData.duration;
+            document.getElementById('package-from').textContent = packageData.fromCity;
+            document.getElementById('package-price-main').textContent = packageData.price;
+            document.getElementById('package-price-cta').textContent = packageData.price;
+            
+            // Render Itinerary 
+            const itineraryHtml = packageData.itinerary.map(item => `
+                <div class="relative pl-8 pb-8">
+                    <div class="absolute w-0.5 bg-indigo-200 h-full left-1 top-0"></div>
+                    <div class="absolute w-4 h-4 rounded-full bg-orange-500 left-0 top-1 ring-4 ring-white shadow"></div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 font-bold text-sm text-gray-600 pr-4">Day ${item.day}</div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 mb-1">${item.title}</h3>
+                            <p class="text-gray-600 text-sm">${item.details}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            document.getElementById('itinerary-content').innerHTML = itineraryHtml;
+
+
+            // Render Inclusions
+            const inclusionsHtml = packageData.inclusions.map(item => `
+                <li class="flex items-start mb-4 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <span class="text-xl mr-3 flex-shrink-0">${item.icon}</span>
+                    <p class="text-gray-700">${item.text}</p>
+                </li>
+            `).join('');
+            document.getElementById('inclusions-content-list').innerHTML = inclusionsHtml;
+
+            // Render Hotels
+            const hotelsHtml = packageData.hotels.map(item => `
+                <div class="bg-white p-5 rounded-xl shadow-lg mb-4 flex flex-col md:flex-row items-start border border-blue-100">
+                    <div class="flex-grow">
+                        <h4 class="text-xl font-bold text-gray-800">${item.name}</h4>
+                        <div class="flex items-center text-sm text-yellow-500 my-1">
+                            ${'⭐'.repeat(Math.floor(item.rating))}
+                            <span class="ml-2 text-gray-500">(${item.rating} Stars)</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">📍 ${item.location}</p>
+                        <p class="text-indigo-600 font-semibold text-base">${item.price}</p>
+                    </div>
+                    <button class="mt-3 md:mt-0 md:ml-6 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105 shadow-md">
+                        View Details
+                    </button>
+                </div>
+            `).join('');
+            document.getElementById('hotels-content').innerHTML = hotelsHtml;
+
+
+            // Activate the first tab (Overview)
+            document.getElementById('tab-overview').click();
+
+            // Initialize new features
+            initCarousel();
+        };
+    </script>
+
+    <!-- Header / Navigation Bar -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-extrabold text-blue-600">WonderlightAdventure</span>
+                <span class="text-sm font-light text-orange-500 ml-1">Our Package</span>
+            </div>
+          
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Left Column: Package Details and Tabs (70%) -->
+            <div class="lg:w-7/12 xl:w-8/12">
+                <!-- Breadcrumbs -->
+                <div class="text-sm text-gray-500 mb-4">
+                    <a href="home.html" class="hover:text-blue-600">Home</a> / <a href="odishabooknow.html" class="hover:text-blue-600">Our Packages</a> /Cuttack
+                </div>
+
+                <!-- Package Header -->
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border-t-4 border-blue-500 mb-6">
+                    <h1 id="package-title" class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">Cuttack- Silver City</h1>
+                    <p class="text-xl font-medium text-blue-600 mb-4">Destination:Cuttack</p>
+                    
+                    <!-- Key Info Pills -->
+                    <div class="flex flex-wrap gap-3 mb-6 items-center">
+                        <span class="bg-indigo-100 text-indigo-700 text-sm font-semibold px-4 py-1.5 rounded-full shadow-sm">
+                            <i class="fas fa-calendar-alt"></i> <span id="package-duration">2 Nights / 3 Days</span>
+                        </span>
+                        <span class="bg-green-100 text-green-700 text-sm font-semibold px-4 py-1.5 rounded-full shadow-sm">
+                            <i class="fas fa-plane"></i> <span id="package-from">Odisha</span>
+                        </span>
+                    </div>
+
+                    <!-- Image Carousel Mock -->
+                    <div id="carousel-container" class="relative h-64 bg-gray-200 rounded-lg overflow-hidden shadow-inner group">
+                        <!-- Slides Container -->
+                        <div id="image-carousel" class="flex w-full h-full transition-transform duration-500 ease-in-out">
+                            <!-- Slides will be injected by JavaScript -->
+                        </div>
+                        
+                        <!-- Previous Button -->
+                        <button onclick="manualPrevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-black/30 hover:bg-black/50 text-white rounded-full transition-opacity opacity-0 group-hover:opacity-100 z-10 hidden sm:block">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
+
+                        <!-- Next Button -->
+                        <button onclick="manualNextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-black/30 hover:bg-black/50 text-white rounded-full transition-opacity opacity-0 group-hover:opacity-100 z-10 hidden sm:block">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                        
+                        <!-- Dots Navigation -->
+                        <div id="carousel-dots" class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-10">
+                            <!-- Dots will be injected by JavaScript -->
+                        </div>
+                        <span class="absolute bottom-4 right-4 text-xs font-semibold text-white/90 bg-black/30 px-2 py-1 rounded-full z-10">
+                            Photo <span id="current-photo-index">1</span> of 6
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Tabs Navigation -->
+                <div class="sticky top-[75px] bg-white z-30 shadow-md rounded-xl p-2 mb-6">
+                    <nav class="flex space-x-2 md:space-x-8 overflow-x-auto whitespace-nowrap">
+                        <button id="tab-overview" onclick="switchTab('content-overview', this)" class="tab-button py-2 px-4 text-gray-500 transition duration-150">Overview</button>
+                        <button onclick="switchTab('content-itinerary', this)" class="tab-button py-2 px-4 text-gray-500 transition duration-150">Itinerary</button>
+                        <button onclick="switchTab('content-inclusions', this)" class="tab-button py-2 px-4 text-gray-500 transition duration-150">Inclusions</button>
+                        <button onclick="switchTab('content-hotels', this)" class="tab-button py-2 px-4 text-gray-500 transition duration-150">Hotels</button>
+                        <button onclick="switchTab('content-terms', this)" class="tab-button py-2 px-4 text-gray-500 transition duration-150">Booking Policy</button>
+                    </nav>
+                </div>
+
+                <!-- Tab Content Containers -->
+                <div class="space-y-6">
+                    <!-- 1. Overview Tab -->
+                    <div id="content-overview" class="tab-content bg-white p-6 rounded-xl shadow-lg">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Package Overview</h2>
+                        <p class="text-gray-700 mb-4">
+      Dive into the rich heritage and vibrant soul of Odisha with this captivating Cuttack Trip Package, thoughtfully designed for travelers seeking a harmonious blend of history, culture, and devotion. Known as the Silver City of India, Cuttack enchants visitors with its timeless charm, ancient monuments, and lively riverfronts. This journey takes you through the majestic Barabati Fort, the revered Chandi Temple, and the serene Dhabaleswar Temple set gracefully on an island in the Mahanadi River. Explore the fascinating Odisha State Maritime Museum, stroll through the bustling Silver Filigree (Tarakasi) markets, and discover the artistry that has flourished here for centuries. As the sun sets, unwind by the tranquil ghats of the Mahanadi or savor authentic Odia delicacies that reflect the city’s cultural depth. Perfect for families, friends, and culture enthusiasts alike, this package promises a seamless and soulful getaway — complete with comfortable stays, guided experiences, and a journey through the enduring legacy and beauty of Cuttack.
+                        </p>
+                        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Key Highlights</h3>
+                        <ul class="list-disc list-inside text-gray-700 ml-4 space-y-2">
+                            <li>Step into history at Barabati Fort, the iconic 14th-century citadel that once guarded the ancient kingdom, offering panoramic views of the Mahanadi River and the city’s royal legacy.</li>
+                            <li>Seek blessings at Chandi Temple, the spiritual heart of Cuttack, dedicated to Goddess Chandi — revered as the protector of the city and celebrated for its vibrant Durga Puja festivities.</li>
+                            <li>Embark on a serene journey to Dhabaleswar Temple, nestled on an island in the Mahanadi River, where the temple’s peaceful ambience and scenic ropeway ride create an unforgettable spiritual retreat.</li>
+                            <li>Explore Odisha’s maritime heritage at the State Maritime Museum, showcasing centuries of trade, navigation, and craftsmanship that once connected Odisha to ancient seafaring routes.</li>
+                            <li>Witness the artistry of Cuttack’s Silver Filigree (Tarakasi) — delicate handcrafted jewelry that reflects the city’s timeless skill and artistic brilliance, perfect for souvenir shopping.</li>
+                            <li>Unwind at the Mahanadi River Ghats during sunset, where the golden hues of the river meet the rhythm of temple bells and the soft whispers of evening prayers.</li>
+                            <li>Experience local life and flavors, from savoring traditional Odia dishes like Dahibara Aloodum and Chhena Jhili to exploring vibrant local markets brimming with crafts and culture.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. Itinerary Tab -->
+                    <div id="content-itinerary" class="tab-content bg-white p-6 rounded-xl shadow-lg">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Detailed Itinerary</h2>
+                        <div id="itinerary-content" class="pr-3">
+                            <!-- Content injected by JavaScript -->
+                        </div>
+
+                        <!-- AI-Powered Discovery Feature -->
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <h3 class="text-xl font-bold text-indigo-700 mb-4 flex items-center">
+                                <!-- Sparkle Icon SVG -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2 text-yellow-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.71l-5.61-5.61c-.39-.39-.39-1.02 0-1.41l5.61-5.61c.39-.39 1.02-.39 1.41 0l5.61 5.61c.39.39.39 1.02 0 1.41l-5.61 5.61c-.39.39-1.02.39-1.41 0zM12 18l-6-6 6-6 6 6-6 6z"/></svg>
+                                AI-Powered Discovery: Find a Hidden Gem
+                            </h3>
+                            <p class="text-gray-600 mb-4">Want to experience something truly local? Use our travel AI to get a unique, off-the-beaten-path recommendation for Odisha.</p>
+                            `
+                            <button id="gemini-generate-btn" onclick="generateGeminiSuggestion()" 
+                                class="flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition duration-300 shadow-lg transform hover:scale-[1.01] mb-4">
+                                <span id="gemini-spinner" class="hidden animate-spin h-5 w-5 mr-3 border-2 border-white border-t-blue-300 rounded-full"></span>
+                                <span class="text-lg">✨ Get Hidden Gem Suggestion</span>
+                            </button>
+
+                            <div id="gemini-suggestion-output" style="display: none;" class="rounded-xl p-4 border transition duration-300 min-h-[50px]">
+                                <!-- AI suggestion will appear here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Inclusions Tab -->
+                    <div id="content-inclusions" class="tab-content bg-white p-6 rounded-xl shadow-lg">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">What's Included</h2>
+                        <ul id="inclusions-content-list" class="space-y-3">
+                            <!-- Content injected by JavaScript -->
+                        </ul>
+                        <div class="mt-6 p-4 bg-orange-50 border-l-4 border-orange-500 rounded-lg">
+                            <p class="font-semibold text-orange-800">Note on Exclusions:</p>
+                            <p class="text-sm text-orange-700">Optional water sports charges, visa fees (if applicable), personal expenses, and anything not specifically mentioned in the 'Inclusions' section are excluded.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Hotels Tab -->
+                    <div id="content-hotels" class="tab-content bg-white p-6 rounded-xl shadow-lg">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Accommodation Options</h2>
+                        <p class="text-gray-600 mb-4">Accommodation is provided in 3-star standard rooms. You can choose to upgrade your hotel during customization.</p>
+                        <div id="hotels-content">
+                            <!-- Content injected by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- 5. Terms Tab -->
+                    <div id="content-terms" class="tab-content bg-white p-6 rounded-xl shadow-lg">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Booking & Cancellation Policy</h2>
+                        <div class="space-y-4 text-gray-700">
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-800">Booking Confirmation</h3>
+                                <p class="text-sm">A 25% non-refundable deposit is required at the time of booking. The remaining balance must be paid 30 days before the departure date.</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-800">Cancellation Policy</h3>
+                                <ul class="list-disc list-inside text-sm ml-4 space-y-1">
+                                    <li>30 days or more prior to departure: Deposit amount will be forfeited.</li>
+                                    <li>15-29 days prior to departure: 50% of the total package cost will be forfeited.</li>
+                                    <li>Less than 15 days prior to departure: 90% of the total package cost will be forfeited.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Price and CTA (30%) - Fixed for desktop -->
+            <div class="lg:w-5/12 xl:w-4/12 hidden lg:block sticky top-[75px] self-start">
+                <div class="bg-white p-6 rounded-xl shadow-2xl border-t-8 border-orange-500">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Package Price</h2>
+                    <p class="text-sm text-gray-500 mb-4">Starting From ( Stay Included)</p>
+                    
+                    <div class="flex items-end justify-between mb-6">
+                        <div class="flex flex-col">
+                            <span class="text-4xl font-extrabold text-blue-600 leading-none" id="package-price-main">₹9,999</span>
+                            <span class="text-sm font-medium text-gray-500 mt-1">per person (Twin Sharing)</span>
+                        </div>
+                        <span class="text-xs text-green-600 bg-green-100 px-2 py-1 rounded-full font-bold">
+                            15% OFF
+                        </span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-sm text-gray-700">
+                            <span>Duration:</span>
+                            <span class="font-semibold text-gray-900" id="package-duration-sidebar">2 Nights / 3 Days</span>
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-700">
+                            <span>Departure City:</span>
+                            <span class="font-semibold text-gray-900" id="package-from-sidebar">Odisha</span>
+                        </div>
+                    </div>
+
+                    <!-- Updated BOOK NOW button for Desktop -->
+                    <a href="odishastandard.html" target="_blank" class="block text-center w-full mt-6 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-xl text-lg transition duration-300 transform hover:scale-[1.01] shadow-xl">
+                        BOOK NOW
+                    </a>
+
+                    <div class="mt-6 text-center text-sm text-gray-500">
+                        Need assistance? <a href="tel:+918117026570" class="text-blue-600 hover:underline font-semibold">Call 8117026570</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Floating CTA Bar (Mobile Only) -->
+    <div id="floating-cta" class="lg:hidden bg-white p-4 border-t border-gray-200 flex justify-between items-center">
+        <div class="flex flex-col">
+            <span class="text-xs font-medium text-gray-500">Starting From</span>
+            <span class="text-2xl font-extrabold text-blue-600" id="package-price-cta">₹9,999</span>
+        </div>
+        <!-- Updated BOOK NOW button for Mobile -->
+        <a href="https://wonderlightadventure.com/checkout/goa-55541" target="_blank" class="flex-shrink-0 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg text-base transition duration-300 shadow-lg">
+            Book Now
+        </a>
+    </div>
+
+</body>
+</html>

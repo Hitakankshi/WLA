@@ -1,563 +1,283 @@
 :root {
-    --primary-color: #008CFF; /* MakeMyTrip blue */
-    --secondary-color: #f89e24; /* MakeMyTrip orange/yellow */
-    --text-color: #333;
-    --light-gray: #f2f2f2;
-    --medium-gray: #ccc;
-    --dark-gray: #555;
-    --border-color: #e0e0e0;
+    --primary-color: #4A90E2;
+    --secondary-color: #50e3c2;
+    --background-color: #f0f2f5;
     --card-background: #ffffff;
-    --red-dot: #e63946;
+    --text-color: #333333;
+    --light-text: #666666;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
-    background-color: var(--light-gray);
+    background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
 }
 
-/* --- Top Header --- */
-.top-header {
+.dashboard-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px 30px;
-    border-bottom: 1px solid var(--border-color);
+    min-height: 100vh;
 }
 
-.top-header .logo img {
-    height: 30px;
-}
-
-.main-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.main-nav li {
-    margin: 0 15px;
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 0.95em;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: color 0.3s ease;
-}
-
-.main-nav a:hover {
-    color: var(--primary-color);
-}
-
-.user-actions .hi-user {
-    color: var(--primary-color);
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.user-actions .hi-user i {
-    font-size: 1.1em;
-}
-
-/* --- Breadcrumb --- */
-.breadcrumb-nav {
-    background-color: #f5f5f5;
-    padding: 10px 50px;
-    font-size: 0.9em;
-    color: var(--dark-gray);
-    border-bottom: 1px solid var(--border-color);
-}
-
-.breadcrumb-nav a {
-    text-decoration: none;
-    color: var(--dark-gray);
-}
-
-.breadcrumb-nav a:hover {
-    text-decoration: underline;
-}
-
-/* --- Profile Container --- */
-.profile-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: var(--card-background);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-/* --- Profile Banner --- */
-.profile-banner {
-    position: relative;
-    height: 200px; /* Adjust as needed */
-    overflow: hidden;
-}
-
-.profile-banner .banner-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.7); /* Darken banner for text visibility */
-}
-
-.banner-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: flex-end; /* Align items to the bottom */
-    padding: 20px 40px;
-    color: white;
-    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0)); /* Gradient for better contrast */
-}
-
-.profile-pic-area {
-    position: relative;
-    margin-right: 25px;
-    margin-bottom: -40px; /* Pull up to overlap banner and main content */
-}
-
-.profile-picture {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
-    background-color: var(--light-gray);
-}
-
-.add-photo-btn {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-size: 1.1em;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.user-info-banner {
-    flex-grow: 1;
-    margin-bottom: 15px; /* Adjust to align with lower part of profile pic */
-}
-
-.banner-username {
-    margin: 0;
-    font-size: 2em;
-    font-weight: 700;
-}
-
-.contact-info span {
-    margin-right: 20px;
-    font-size: 0.9em;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.rewards-section {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.mycash {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 8px 15px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 0.9em;
-}
-
-.mycash i {
-    font-size: 0.8em;
-}
-
-.gift-cards-btn {
-    background-color: var(--secondary-color);
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-}
-
-.gift-cards-btn:hover {
-    background-color: #d17a0b;
-}
-
-/* --- Main Content Area (Sidebar + Profile Details) --- */
-.main-content {
-    display: flex;
-    padding-top: 50px; /* Space for the banner overlay to dip into */
-}
-
-/* --- Sidebar --- */
+/* Sidebar Styling */
 .sidebar {
     width: 250px;
-    padding: 20px 30px;
-    border-right: 1px solid var(--border-color);
-    background-color: #fff;
-    min-height: 500px; /* Ensure sidebar has some height */
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px var(--shadow-color);
 }
 
-.sidebar h3 {
-    font-size: 0.9em;
-    color: var(--dark-gray);
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 15px;
-    letter-spacing: 0.5px;
+.user-profile-summary {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 25px;
-}
-
-.sidebar li {
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
     margin-bottom: 10px;
 }
 
-.sidebar a {
-    text-decoration: none;
-    color: var(--text-color);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.sidebar a i {
-    font-size: 1.1em;
-    color: var(--dark-gray);
-}
-
-.sidebar li.active a {
-    background-color: var(--primary-color);
-    color: white;
+.user-name {
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
-.sidebar li.active a i {
-    color: white;
+.user-email {
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
-.sidebar li.active .red-dot {
+.edit-profile-btn {
     display: inline-block;
-    width: 8px;
-    height: 8px;
-    background-color: var(--red-dot);
-    border-radius: 50%;
-    margin-left: auto; /* Push to the right */
-}
-
-.sidebar a:not(.active):hover {
-    background-color: var(--light-gray);
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #fff;
     color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
 }
 
-.sidebar hr {
-    border: none;
-    border-top: 1px solid var(--border-color);
-    margin: 20px 0;
+.edit-profile-btn:hover {
+    background-color: #eee;
 }
 
-/* --- Profile Details Section --- */
-.profile-details-section {
+.dashboard-nav ul {
+    list-style: none;
+}
+
+.dashboard-nav li {
+    margin-bottom: 10px;
+}
+
+.dashboard-nav a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.dashboard-nav a:hover,
+.dashboard-nav .active a {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dashboard-nav a i {
+    margin-right: 10px;
+}
+
+/* Main Content Styling */
+.main-content {
     flex-grow: 1;
-    padding: 20px 40px;
-    background-color: var(--card-background);
+    padding: 30px;
 }
 
-.profile-details-header {
+.dashboard-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.profile-details-header h2 {
-    margin: 0;
-    font-size: 1.8em;
-    font-weight: 500;
-}
-
-.save-button {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.save-button:hover {
-    background-color: #0056b3;
-}
-
-/* --- Profile Completion Card --- */
-.profile-completion-card {
-    background-color: #fefbe6; /* Light yellow background */
-    border: 1px solid #ffeeba; /* Yellow border */
-    border-radius: 8px;
-    padding: 15px 20px;
     margin-bottom: 30px;
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-    align-items: center;
-    gap: 15px;
 }
 
-.progress-bar-container {
-    width: 60px; /* Fixed width for the circular progress */
-    height: 60px;
-    border-radius: 50%;
-    background: conic-gradient(var(--secondary-color) 30%, var(--medium-gray) 30%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    color: var(--secondary-color);
-    font-size: 0.9em;
+.dashboard-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
 }
 
-/* For a simpler linear progress bar: */
-.profile-completion-card .progress-bar-container {
-    flex-grow: 0; /* Don't let it grow */
-    width: 100px;
-    height: 8px;
-    background-color: var(--medium-gray);
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-}
-
-.profile-completion-card .progress-bar {
-    height: 100%;
-    background-color: var(--secondary-color);
-    border-radius: 5px;
-}
-
-.completion-text {
-    font-weight: 500;
-    color: var(--dark-gray);
-    flex-basis: 100%; /* Take full width on small screens */
-    margin-top: 5px; /* Space below progress bar */
-}
-
-.profile-completion-card p {
-    margin: 0;
-    font-size: 0.9em;
-    color: var(--dark-gray);
-    flex-grow: 1;
-}
-
-.add-email-btn {
-    background-color: #fff;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-    padding: 8px 15px;
-    border-radius: 5px;
+.notification-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
     cursor: pointer;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease;
 }
 
-.add-email-btn:hover {
-    background-color: var(--primary-color);
-    color: white;
+/* Overview Cards */
+.overview-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
+.overview-card {
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    text-align: center;
+}
 
-/* --- Form Grid --- */
-.profile-details-section h3 {
-    font-size: 1.2em;
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 5px;
+}
+
+.card-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+/* Recent Activity */
+.recent-activity-section {
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    margin-bottom: 30px;
+}
+
+.recent-activity-section h2 {
+    font-size: 1.5rem;
     font-weight: 500;
-    margin-top: 30px;
     margin-bottom: 20px;
 }
 
-.form-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
-    gap: 20px;
+.activity-list {
+    list-style: none;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
+.activity-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
 }
 
-.form-group label {
-    font-size: 0.8em;
-    color: var(--dark-gray);
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-date {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--light-text);
     margin-bottom: 5px;
-    text-transform: uppercase;
+}
+
+.activity-text {
+    font-size: 1rem;
+}
+
+/* Additional Info Section */
+.additional-info-section {
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.additional-info-section h2 {
+    font-size: 1.5rem;
     font-weight: 500;
+    margin-bottom: 20px;
 }
 
-.form-group input,
-.form-group select {
-    padding: 10px 12px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    font-size: 1em;
-    color: var(--text-color);
-    background-color: #fff;
-    appearance: none; /* Remove default select styling */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    cursor: pointer;
+.info-group {
+    margin-bottom: 15px;
 }
 
-.form-group input:focus,
-.form-group select:focus {
-    border-color: var(--primary-color);
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(0, 140, 255, 0.2);
+.info-group label {
+    display: block;
+    font-weight: 500;
+    color: var(--light-text);
 }
 
-.form-group input[readonly] {
-    background-color: #f9f9f9;
-    cursor: default;
+.info-group p {
+    margin-top: 5px;
 }
 
-/* Optional: Add a dropdown arrow for selects */
-.form-group select {
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 20px;
-    padding-right: 30px; /* Make space for the arrow */
-}
-
-
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .top-header {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 10px;
-    }
-    .main-nav {
-        order: 3;
-        width: 100%;
-        margin-top: 10px;
-    }
-    .main-nav ul {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .main-nav li {
-        margin: 5px 10px;
-    }
-
-    .breadcrumb-nav {
-        padding: 10px 20px;
-    }
-
-    .profile-container {
-        width: 100%;
-        margin: 10px 0;
-        border-radius: 0;
-    }
-
-    .banner-overlay {
+    .dashboard-container {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 15px 20px;
-    }
-
-    .profile-pic-area {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .user-info-banner {
-        margin-bottom: 10px;
-    }
-
-    .rewards-section {
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 0;
-    }
-
-    .main-content {
-        flex-direction: column;
-        padding-top: 20px;
     }
 
     .sidebar {
         width: 100%;
-        border-right: none;
-        border-bottom: 1px solid var(--border-color);
-        padding: 15px 20px;
+        padding: 15px;
     }
 
-    .sidebar ul {
+    .user-profile-summary {
+        margin-bottom: 15px;
+    }
+
+    .dashboard-nav ul {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 0;
-    }
-    .sidebar li {
-        margin-bottom: 0;
+        justify-content: space-around;
+        align-items: center;
     }
 
-    .profile-details-section {
+    .dashboard-nav li {
+        margin: 0;
+    }
+    
+    .dashboard-nav a {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .dashboard-nav a i {
+        margin: 0 0 5px 0;
+    }
+
+    .main-content {
         padding: 20px;
     }
-
-    .profile-completion-card {
+    
+    .dashboard-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        margin-bottom: 20px;
     }
 
-    .profile-completion-card p {
-        flex-basis: auto; /* Reset flex-basis */
-    }
-
-    .form-grid {
-        grid-template-columns: 1fr;
+    .dashboard-header h1 {
+        margin-bottom: 10px;
     }
 }

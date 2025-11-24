@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Code</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom style for the Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Fallback font if Inter doesn't load */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        /* Style for the OTP inputs to remove number spinners in Firefox/Chrome */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Main Page Content -->
+    <!-- 
+    <div class="min-h-screen flex items-center justify-center">
+        <button id="open-modal-btn" class="px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+            Enter code
+        </button>
+    </div>
+    -->
+
+    <!-- 
+      Modal Overlay & Content 
+      Initially hidden, shown with JavaScript
+    -->
+    <div id="otp-modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 transition-opacity duration-300 opacity-100">
+        
+        <!-- Modal Content Box -->
+        <div id="modal-content" class="bg-white rounded-2xl shadow-xl w-full max-w-md p-6 sm:p-8 transform transition-all scale-100 opacity-100">
+            
+            <!-- Logo Header -->
+            <div class="text-center mb-6">
+                <span class="text-3xl font-bold text-blue-600 tracking-tight">WonderlightAdventure</span>
+               
+            </div>
+
+            <!-- Modal Header -->
+            <div class="text-center">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Verification</h2>
+                <p class="text-gray-500 mt-2">Please enter the 6-digit code sent to you.</p>
+            </div>
+
+            <!-- OTP Input Fields -->
+            <div class="flex justify-center gap-2 sm:gap-3 my-8">
+                <!-- We use 6 separate inputs for the OTP -->
+                <input type="text" maxlength="1" class="otp-input w-12 h-12 sm:w-14 sm:h-14 text-center text-2xl font-semibold text-gray-700 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition duration-200" pattern="\d" inputmode="numeric">
+                <input type="text" maxlength="1" class="otp-input w-12 h-12 sm:w-14 sm:h-14 text-center text-2xl font-semibold text-gray-700 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition duration-200" pattern="\d" inputmode="numeric">
+                <input type="text" maxlength="1" class="otp-input w-12 h-12 sm:w-14 sm:h-14 text-center text-2xl font-semibold text-gray-700 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition duration-200" pattern="\d" inputmode="numeric">
+                <input type="text" maxlength="1" class="otp-input w-12 h-12 sm:w-14 sm:h-14 text-center text-2xl font-semibold text-gray-700 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition duration-200" pattern="\d" inputmode="numeric">
+                <input type="text" maxlength="1" class="otp-input w-12 h-12 sm:w-14 sm:h-14 text-center text-2xl font-semibold text-gray-700 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition duration-200" pattern="\d" inputmode="numeric">
+                <input type="text" maxlength="1" class="otp-input w-12 h-12 sm:w-14 sm:h-14 text-center text-2xl font-semibold text-gray-700 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition duration-200" pattern="\d" inputmode="numeric">
+            </div>
+            
+            <!-- A message area for success or error -->
+            <div id="message-area" class="text-center h-5 mb-4"></div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col gap-4">
+                <button id="verify-btn" class="w-full py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    Verify Code
+                </button>
+                <!--
+                <button id="cancel-btn" class="w-full py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
+                    Cancel
+                </button>
+                -->
+            </div>
+            
+            <!-- Resend Code Link -->
+            <p class="text-center text-sm text-gray-500 mt-6">
+                Didn't receive the code? 
+                
+            </p>
+
+        </div>
+    </div>
+
+    <script>
+        // Get all the necessary elements from the DOM
+        // const openModalBtn = document.getElementById('open-modal-btn');
+        const otpModal = document.getElementById('otp-modal');
+        const modalContent = document.getElementById('modal-content');
+        // const cancelBtn = document.getElementById('cancel-btn');
+        const verifyBtn = document.getElementById('verify-btn');
+        const otpInputs = document.querySelectorAll('.otp-input');
+        const messageArea = document.getElementById('message-area');
+
+        // Function to open the modal with animation
+        /*
+        function openModal() {
+            otpModal.classList.remove('hidden');
+            // We use a tiny timeout to allow the browser to apply 'hidden' removal first
+            // This makes the opacity and scale transitions work
+            setTimeout(() => {
+                otpModal.classList.add('opacity-100');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+            otpInputs[0].focus(); // Focus the first input box
+        }
+        */
+
+        // Function to close the modal with animation
+        /*
+        function closeModal() {
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            otpModal.classList.remove('opacity-100');
+            
+            setTimeout(() => {
+                otpModal.classList.add('hidden');
+                clearInputs(); // Clear inputs when modal closes
+                messageArea.textContent = ''; // Clear any messages
+            }, 300); // Wait for the transition to finish
+        }
+        */
+
+        // Function to clear all OTP inputs
+        function clearInputs() {
+            otpInputs.forEach(input => {
+                input.value = '';
+            });
+        }
+
+        // --- Event Listeners ---
+
+        // Open modal when the button is clicked
+        // openModalBtn.addEventListener('click', openModal);
+
+        // Close modal when the "Cancel" button is clicked
+        // cancelBtn.addEventListener('click', closeModal);
+
+        // Close modal when clicking on the overlay (outside the content box)
+        /*
+        otpModal.addEventListener('click', (event) => {
+            // Check if the click is on the overlay itself, not its children
+            if (event.target === otpModal) {
+                closeModal();
+            }
+        });
+        */
+        
+        // Handle the "Verify" button click
+        verifyBtn.addEventListener('click', () => {
+            let otp = '';
+            otpInputs.forEach(input => {
+                otp += input.value;
+            });
+
+            // Reset message
+            messageArea.textContent = '';
+            messageArea.classList.remove('text-green-600', 'text-red-500');
+
+            if (otp.length === 6) {
+                // --- Verification Logic ---
+                // In a real app, you'd send this 'otp' to your server.
+                // For this demo, we'll just show a success message.
+                
+                console.log('Verifying OTP:', otp);
+                messageArea.textContent = 'Code Verified Successfully!';
+                messageArea.classList.add('text-green-600');
+                
+                // Close the modal after a short delay
+                // setTimeout(closeModal, 1500); // Removed as modal cannot be closed
+
+            } else {
+                // Show an error if the code isn't complete
+                messageArea.textContent = 'Please enter all 6 digits.';
+                messageArea.classList.add('text-red-500');
+            }
+        });
+
+        // --- Smart OTP Input Logic ---
+
+        otpInputs.forEach((input, index) => {
+            // Handle typing a digit
+            input.addEventListener('input', (e) => {
+                // If a digit is entered and it's not the last box, move to the next one
+                if (input.value.length === 1 && index < otpInputs.length - 1) {
+                    otpInputs[index + 1].focus();
+                }
+            });
+
+            // Handle Backspace
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace') {
+                    // If Backspace is pressed and the box is empty, move to the previous box
+                    if (input.value === '' && index > 0) {
+                        e.preventDefault(); // Prevent default backspace behavior
+                        otpInputs[index - 1].focus();
+                        otpInputs[index - 1].value = ''; // Clear previous box as well
+                    }
+                }
+            });
+            
+            // Handle pasting a code
+            input.addEventListener('paste', (e) => {
+                e.preventDefault(); // Stop the default paste behavior
+                const pasteData = e.clipboardData.getData('text').trim();
+                
+                // Only process if the pasted data is digits
+                if (/^\d+$/.test(pasteData)) {
+                    const digits = pasteData.split('');
+                    
+                    // Distribute the pasted digits across the inputs
+                    digits.forEach((digit, i) => {
+                        const targetIndex = index + i;
+                        if (targetIndex < otpInputs.length) {
+                            otpInputs[targetIndex].value = digit;
+                        }
+                    });
+                    
+                    // Focus the last pasted input or the final input
+                    const focusIndex = Math.min(index + digits.length, otpInputs.length - 1);
+                    otpInputs[focusIndex].focus();
+                }
+            });
+        });
+
+        // Focus the first input box on page load
+        window.onload = () => {
+            otpInputs[0].focus();
+        };
+
+    </script>
+</body>
+</html>
+
+
