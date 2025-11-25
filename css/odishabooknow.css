@@ -1,0 +1,59 @@
+/* Local fallback CSS for odishabooknow.html --- provides basic look when Tailwind CDN is unavailable */
+/* Basic resets and layout */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background: #f3f4f6; color:#111827; }
+.max-w-7xl { max-width: 1150px; margin-left: auto; margin-right: auto; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.space-y-12 > * + * { margin-top: 3rem; }
+.text-center { text-align:center; }
+.p-4 { padding: 1rem; }
+.sm\:p-8 { padding: 1rem; }
+.bg-white { background: #fff; }
+.rounded-xl { border-radius: 12px; }
+.shadow-lg { box-shadow: 0 8px 30px rgba(17,24,39,0.08); }
+.overflow-hidden { overflow: hidden; }
+.transition-transform { transition: transform 0.25s ease; }
+.transform { transform: none; }
+.hover\:scale-105:hover { transform: scale(1.05); }
+.w-full { width: 100%; }
+.h-48 { height: 12rem; }
+.object-cover { object-fit: cover; }
+.p-6 { padding: 1.5rem; }
+.space-y-4 > * + * { margin-top: 1rem; }
+.flex { display:flex; }
+.justify-between { justify-content: space-between; }
+.items-center { align-items:center; }
+.text-2xl { font-size: 1.5rem; }
+.font-semibold { font-weight: 600; }
+.text-blue-800 { color:#1e3a8a; }
+.bg-blue-100 { background:#DBEAFE; }
+.text-blue-800 { color:#1e3a8a; }
+.text-sm { font-size: 0.875rem; }
+.rounded-full { border-radius: 9999px; }
+.text-gray-500 { color: #6b7280; }
+.text-gray-700 { color: #374151; }
+.pt-4 { padding-top: 1rem; }
+.border-t { border-top: 1px solid #e5e7eb; }
+.mt-4 { margin-top: 1rem; }
+.hidden { display: none !important; }
+.block { display: block; }
+.w-1\/2 { width: 50%; }
+.font-bold { font-weight:700; }
+.rounded-full { border-radius:9999px; }
+.border { border: 1px solid #cbd5e1; }
+.text-blue-600 { color:#2563eb }
+.hover\:bg-blue-700:hover { background:#1d4ed8; }
+.hover\:bg-blue-50:hover { background: #eff6ff; }
+.container { padding-left: 1rem; padding-right: 1rem; }
+.grid { display: grid; }
+.md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.gap-8 { gap: 2rem; }
+.space-y-2 > * + * { margin-top:0.5rem; }
+
+/* small responsive tweaks */
+@media (max-width: 768px) {
+  .md\:grid-cols-2 { grid-template-columns: 1fr; }
+  .lg\:grid-cols-3 { grid-template-columns: 1fr; }
+  .w-1\/2 { width: 100%; }
+}
